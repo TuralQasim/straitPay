@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function BLogText1() {
+function BlogText1() {
   return (
     <>
       <div className="blog_text_hero">
@@ -81,4 +81,4 @@ function BLogText1() {
   );
 }
 
-export default BLogText1;
+export default BlogText1;
