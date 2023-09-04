@@ -3,14 +3,14 @@ import { FaArrowRight } from "react-icons/fa";
 import BlogItem from "../components/BlogItem";
 import { Link } from "react-router-dom";
 import BlogModal from "../components/BlogModal";
-import BLogText2 from "../components/BLogText2";
-import BLogText3 from "../components/BLogText3";
-import BLogText4 from "../components/BLogText4";
 import BlogText1 from "../components/BlogText1";
+import BlogText2 from "../components/BlogText2";
+import BlogText3 from "../components/BlogText3";
+import BLogText4 from "../components/BLogText4";
 
 const Blog: React.FC = () => {
   const [modal, setModal] = useState<boolean>(false);
-  const texts = [<BlogText1 />, <BLogText2 />, <BLogText3 />, <BLogText4 />];
+  const texts = [<BlogText1 />, <BlogText2 />, <BlogText3 />, <BLogText4 />];
   const [conp, setComp] = useState<React.JSX.Element>();
   const checkModal = (e: React.MouseEvent<Element, MouseEvent>) => {
     const target = e.target as HTMLElement;
