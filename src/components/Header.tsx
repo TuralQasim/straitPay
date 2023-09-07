@@ -73,10 +73,7 @@ const Header: React.FC = () => {
                   className={
                     hash == "#history_title_id" ? "active_hash" : "not_active"
                   }
-                  location={{
-                    pathname:
-                      document.location.pathname + document.location.hash,
-                  }}
+        
                 >
                   Our Story
                 </NavHashLink>
@@ -86,10 +83,7 @@ const Header: React.FC = () => {
                   className={
                     hash == "#mission_title_id" ? "active_hash" : "not_active"
                   }
-                  location={{
-                    pathname:
-                      document.location.pathname + document.location.hash,
-                  }}
+       
                 >
                   Our Mission
                 </NavHashLink>
