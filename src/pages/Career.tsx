@@ -37,7 +37,7 @@ const Career: React.FC = () => {
       return newDrop;
     });
   };
-  const checkValueJob = (e: React.MouseEvent) => {
+  const checkValueJob = (e: any) => {
     e.stopPropagation();
     setCheckedValue((prev) => {
       let newCat = { ...prev, job: e.target.textContent };

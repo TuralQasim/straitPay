@@ -5,9 +5,9 @@ import { connect } from "react-redux";
 import { AnimatePresence, motion } from "framer-motion";
 
 type EmailProps = {
-  setCurrentStep: (arg0: (step: number) => void) => void;
-  dispatch: any;
-  verified: boolean;
+  setCurrentStep?:any;
+  dispatch?: any;
+  verified?: boolean;
 };
 type Data = {
   name: string;

@@ -6,7 +6,7 @@ import BlogModal from "../components/BlogModal";
 import BlogText1 from "../components/BlogText1";
 import BlogText2 from "../components/BlogText2";
 import BlogText3 from "../components/BlogText3";
-import BLogText4 from "../components/BLogText4";
+import BLogText4 from "../components/BlogText4";
 
 const Blog: React.FC = () => {
   const [modal, setModal] = useState<boolean>(false);
