@@ -33,6 +33,7 @@ const Header: React.FC = () => {
     enableScroll();
   }
   const { hash } = useLocation();
+  const { pathname } = useLocation();
   return (
     <>
       <div className="container">
@@ -40,6 +41,28 @@ const Header: React.FC = () => {
           <Link className="logo" to="/">
             <img src="../src/icons/logo.svg" alt="" />
           </Link>
+          <div className="pers_business">
+            <NavLink
+              to="/"
+              className={
+                pathname != "/business" && pathname != "/business"
+                  ? "personal_link"
+                  : ""
+              }
+            >
+              Personal
+            </NavLink>
+            <NavLink
+              to="/business"
+              className={
+                pathname == "/business" && pathname == "/business"
+                  ? "business_link"
+                  : ""
+              }
+            >
+              Business
+            </NavLink>
+          </div>
           <ul className="navbar">
             <div className="chechedCompany">
               <p>Company</p>

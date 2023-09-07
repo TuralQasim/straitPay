@@ -4,6 +4,7 @@ import React from "react";
 import { lazy, Suspense, useEffect, useState } from "react";
 import Header from "./components/Header";
 import Header2 from "./components/Header2";
+import Header3 from "./components/Header3";
 import Footer from "./components/Footer";
 import { Route, Routes } from "react-router-dom";
 import { connect } from "react-redux";
@@ -23,6 +24,8 @@ const Verificate = lazy(() => import("./pages/Verificate"));
 const Transaction = lazy(() => import("./pages/Transaction"));
 const KYC = lazy(() => import("./pages/KYC"));
 const BlogNews = lazy(() => import("./pages/BlogNews"));
+const FaqsBusiness = lazy(() => import("./pages/FaqsBusiness"));
+const Business = lazy(() => import("./pages/Business"));
 
 function App() {
   const location = useLocation();
@@ -39,6 +42,8 @@ function App() {
   );
   const header2Visible =
     location.pathname == "/blog" || location.pathname == "/blog-news";
+  const header3Visible =
+    location.pathname == "/business" || location.pathname == "/faqs-business";
   const routes = [
     {
       path: "/",
@@ -47,6 +52,14 @@ function App() {
     {
       path: "/kyc",
       element: <KYC />,
+    },
+    {
+      path: "/business",
+      element: <Business />,
+    },
+    {
+      path: "/faqs-business",
+      element: <FaqsBusiness />,
     },
     {
       path: "/blog-news",
@@ -95,7 +108,15 @@ function App() {
   ];
   return (
     <>
-      {header2Visible ? <Header2 /> : !shouldHideHeaderFooter ? <Header /> : ""}
+      {header3Visible ? (
+        <Header3 />
+      ) : header2Visible ? (
+        <Header2 />
+      ) : !shouldHideHeaderFooter ? (
+        <Header />
+      ) : (
+        ""
+      )}
       <Routes>
         {routes.map((t) => (
           <Route

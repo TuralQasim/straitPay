@@ -243,6 +243,65 @@
     gap: 10px;
     width: 85%;
   }
+  .business_hero h2 {
+    font-size: 36px;
+    line-height: 40px;
+    max-width: 670px;
+  }
+  .business_hero p {
+    font-size: 20px;
+    line-height: 32px;
+    max-width: 660px;
+    margin: 15px 0 30px;
+  }
+  .business_features_title {
+    margin-bottom: 20px;
+    gap: 10px;
+  }
+  .business_features_title h2 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .business_features_title p {
+    font-size: 20px;
+    line-height: 32px;
+    max-width: 740px;
+  }
+  .business_features_item {
+    padding: 35px 25px;
+    gap: 25px;
+    min-height: 294px;
+  }
+  .business_features_item h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .business_features_item p {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .business_features_hero {
+    gap: 10px;
+  }
+  .awards_business_hero {
+    margin-bottom: 0;
+  }
+  .business_transact_text h2 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .business_transact_text p {
+    font-size: 18px;
+    line-height: 22px;
+    max-width: 500px;
+  }
+  .business_transact_btns {
+    width: 200px;
+  }
+  .business_transact_btns a {
+    font-size: 14px;
+    height: 48px;
+  }
 }
 @media screen and (max-width: 768px) {
   .navbar {
@@ -803,6 +862,87 @@
     margin-top: 15px;
     margin-left: 0 !important;
     padding: 3px 15px;
+  }
+  .business_hero h2 {
+    font-size: 28px;
+    line-height: 32px;
+    max-width: 470px;
+  }
+  .business_hero p {
+    font-size: 18px;
+    line-height: 20px;
+    max-width: 470px;
+    margin: 15px 0 30px;
+  }
+  .business_hero_bg {
+    height: 70vh;
+  }
+  .business_hero {
+    height: 70vh;
+    padding: 40px 0;
+  }
+  .business_features_title {
+    margin-bottom: 20px;
+    gap: 5px;
+  }
+  .business_features_title h2 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .business_features_title p {
+    font-size: 16px;
+    line-height: 20px;
+    max-width: 540px;
+  }
+  .business_features_item {
+    padding: 35px 25px;
+    gap: 25px;
+    min-height: 294px;
+  }
+  .business_features_item h2 {
+    font-size: 28px;
+    line-height: 32px;
+  }
+  .business_features_item p {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .business_features_hero {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  .awards_business_hero {
+    margin-bottom: 0;
+  }
+  .business_transact_text h2 {
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;
+    width: 100%;
+  }
+  .business_transact_text p {
+    font-size: 18px;
+    line-height: 22px;
+    max-width: 500px;
+    text-align: center;
+  }
+  .business_transact_top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .business_transact_btns {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: row;
+  }
+  .business_transact_btns a {
+    width: 200px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -1388,6 +1528,124 @@
   .recent_true .download .account_title {
     margin: 0 auto 15px;
   }
+  .business_hero h2 {
+    font-size: 20px;
+    line-height: 24px;
+    max-width: 470px;
+    font-weight: 500;
+  }
+  .business_hero p {
+    font-size: 16px;
+    line-height: 20px;
+    max-width: 470px;
+    margin: 10px 0 20px;
+  }
+  .business_hero_bg {
+    overflow: hidden;
+  }
+  .business_bg_img {
+    transform: scale(1.3) translateY(-40px);
+  }
+  .business_features_title {
+    margin-bottom: 20px;
+    gap: 10px;
+  }
+  .business_features_title h2 {
+    font-size: 28px;
+    line-height: 32px;
+  }
+  .business_features_title p {
+    font-size: 16px;
+    line-height: 20px;
+    max-width: 540px;
+  }
+  .business_features_item {
+    padding: 35px 25px;
+    gap: 25px;
+    min-height: 294px;
+  }
+  .business_features_item h2 {
+    font-size: 28px;
+    line-height: 32px;
+  }
+  .business_features_item p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .business_features_hero {
+    padding: 0 25px;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+  }
+  .business_features {
+    margin: 30px 0;
+  }
+  .awards_business_hero {
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+  .awards_business_hero .awards_right {
+    width: 100%;
+  }
+  .awards_business_hero .awards_left {
+    width: 100%;
+  }
+  .business_transact_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+  .business_transact_text h2 {
+    font-size: 24px;
+    line-height: 40px;
+    text-align: center;
+    width: 100%;
+  }
+  .business_transact_text p {
+    font-size: 18px;
+    line-height: 22px;
+    max-width: 500px;
+    text-align: center;
+  }
+  .business_transact_top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .business_transact_btns {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+  }
+  .business_transact_btns a {
+    width: 230px;
+    height: 50px;
+  }
+  .business_transact_item img {
+    transform: scale(0.8);
+  }
+  .business_transact_item p {
+    font-size: 12px;
+  }
+  .business_transact_bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .business_transact {
+    margin: 30px 0;
+  }
 }
 @media screen and (max-width: 320px) {
   .features {
@@ -1467,5 +1725,21 @@
   }
   .navbar a.not_active {
     color: #0c0d10 !important;
+  }
+  .business_bg_img {
+    transform: scale(1.7) translateY(-20px);
+  }
+  .business_features_hero {
+    padding: 0;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+  }
+  .business_features_item {
+    padding: 25px 25px;
+    gap: 25px;
+    min-height: 254px;
+  }
+  .awards_business_hero {
+    margin-bottom: 0;
   }
 }

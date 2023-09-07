@@ -43,7 +43,7 @@ const Header2: React.FC = () => {
             <NavLink
               to="/"
               className={
-                pathname != "/business" && pathname != "/business"
+                pathname != "/business" && pathname != "/faqs-business"
                   ? "personal_link"
                   : ""
               }
@@ -53,7 +53,7 @@ const Header2: React.FC = () => {
             <NavLink
               to="/business"
               className={
-                pathname == "/business" && pathname == "/business"
+                pathname == "/business" || pathname == "/faqs-business"
                   ? "business_link"
                   : ""
               }
@@ -94,26 +94,8 @@ const Header2: React.FC = () => {
                 <NavLink to="/career">Career</NavLink>
               </div>
             </div>
-            <NavLink to="/faqs">FAQs</NavLink>
+            <NavLink to="/faqs-business">FAQs</NavLink>
             <NavLink to="/userAccount">Account</NavLink>
-            {pathname == "/blog-news" && (
-              <NavLink
-                className="news_active"
-                to="/blog"
-                onClick={() => setBurgerOpen(false)}
-              >
-                All topics
-              </NavLink>
-            )}
-            {pathname == "/blog" && (
-              <NavLink
-                className="news_active"
-                to="/blog-news"
-                onClick={() => setBurgerOpen(false)}
-              >
-                straitNews
-              </NavLink>
-            )}
           </ul>
           <div className="sign_in_up">
             <Link className="sign_in" to="/login">
