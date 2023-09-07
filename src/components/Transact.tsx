@@ -12,30 +12,30 @@ const Transact: React.FC = () => {
         </p>
         <div className="transact_items">
           <div className="transact_item">
-            <img src="../src/icons/transact1.svg" alt="" />
+            <img src="./icons/transact1.svg" alt="" />
             <p>NIGERIA</p>
           </div>
           <div className="transact_item">
-            <img src="../src/icons/transact2.svg" alt="" />
+            <img src="./icons/transact2.svg" alt="" />
             <p>GHANA</p>
           </div>
           <div className="transact_item">
-            <img src="../src/icons/transact3.svg" alt="" />
+            <img src="./icons/transact3.svg" alt="" />
             <p>SOUTH AFRICA</p>
           </div>
           <div className="transact_item">
-            <img src="../src/icons/transact4.svg" alt="" />
+            <img src="./icons/transact4.svg" alt="" />
             <p>KENYA</p>
           </div>
         </div>
       </div>
       <div className="transact_right">
         <Link to="" className="google_play">
-          <img src="../src/icons/google_play.svg" alt="" />
+          <img src="./icons/google_play.svg" alt="" />
           Get on Play Store
         </Link>
         <Link to="">
-          <img src="../src/icons/app_store.svg" alt="" />
+          <img src="./icons/app_store.svg" alt="" />
           Get on App Store
         </Link>
       </div>

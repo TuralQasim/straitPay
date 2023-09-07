@@ -24,7 +24,7 @@ const UserAccount: React.FC<UserAccountProps> = ({
     <>
       <div className="container">
         <div className="hey">
-          <img src="../src/data/user/hey.png" alt="" className="hey_img" />
+          <img src="./data/user/hey.png" alt="" className="hey_img" />
           <p className="hey_p">Hey Hafeez!, Welcome to straitPay</p>
         </div>
         <div className="wallets">
@@ -40,7 +40,7 @@ const UserAccount: React.FC<UserAccountProps> = ({
               )}
             </div>
             <div className="wallet_img">
-              <img src="../src/icons/flag1.svg" alt="" />
+              <img src="./icons/flag1.svg" alt="" />
             </div>
           </div>
           <div className="wallet_item wallet_item2">
@@ -55,7 +55,7 @@ const UserAccount: React.FC<UserAccountProps> = ({
               )}
             </div>
             <div className="wallet_img">
-              <img src="../src/icons/flag2.svg" alt="" />
+              <img src="./icons/flag2.svg" alt="" />
             </div>
           </div>
           <div className="wallet_item wallet_item3">
@@ -70,7 +70,7 @@ const UserAccount: React.FC<UserAccountProps> = ({
               )}
             </div>
             <div className="wallet_img">
-              <img src="../src/icons/flag3.svg" alt="" />
+              <img src="./icons/flag3.svg" alt="" />
             </div>
           </div>
           <div className="wallet_item wallet_item4">
@@ -85,7 +85,7 @@ const UserAccount: React.FC<UserAccountProps> = ({
               )}
             </div>
             <div className="wallet_img">
-              <img src="../src/icons/flag4.svg" alt="" />
+              <img src="./icons/flag4.svg" alt="" />
             </div>
           </div>
         </div>
@@ -107,7 +107,7 @@ const UserAccount: React.FC<UserAccountProps> = ({
                 <div className="for_compelete_activities">
                   <div className="for_complite_item">
                     <div className="for_complite_img">
-                      <img src="../src/icons/check.svg" alt="" />
+                      <img src="./icons/check.svg" alt="" />
                     </div>
                     <div className="for_complete_text">
                       <h3>Verified Phone Number</h3>
@@ -118,7 +118,7 @@ const UserAccount: React.FC<UserAccountProps> = ({
                   </div>
                   <div className="for_complite_item">
                     <div className="for_complite_img">
-                      <img src="../src/icons/plus.svg" alt="" />
+                      <img src="./icons/plus.svg" alt="" />
                     </div>
                     <div className="for_complete_text">
                       <h3>Wallet Funded</h3>
@@ -130,7 +130,7 @@ const UserAccount: React.FC<UserAccountProps> = ({
                   </div>
                   <div className="for_complite_item">
                     <div className="for_complite_img">
-                      <img src="../src/icons/verified_user.svg" alt="" />
+                      <img src="./icons/verified_user.svg" alt="" />
                     </div>
                     <div className="for_complete_text">
                       <h3>Verified ID</h3>
@@ -148,11 +148,11 @@ const UserAccount: React.FC<UserAccountProps> = ({
               <h2 className="account_title">DOWNLOAD APP</h2>
               <div className="download_links">
                 <Link to="" className="google_play">
-                  <img src="../src/icons/google_play.svg" alt="" />
+                  <img src="./icons/google_play.svg" alt="" />
                   Get on Play Store
                 </Link>
                 <Link to="">
-                  <img src="../src/icons/app_store.svg" alt="" />
+                  <img src="./icons/app_store.svg" alt="" />
                   Get on App Store
                 </Link>
               </div>

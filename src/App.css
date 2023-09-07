@@ -2387,7 +2387,7 @@ footer {
   color: #544e9e !important;
 }
 .faqs_question_bg {
-  background-image: url("../src/data/faqsBusiness/faqsBg.png");
+  background-image: url("./data/faqsBusiness/faqsBg.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -2658,7 +2658,7 @@ footer {
   align-items: center;
   gap: 10px;
 }
-.pers_business a{
+.pers_business a {
   color: #0e0f0c;
 }
 .personal_link,

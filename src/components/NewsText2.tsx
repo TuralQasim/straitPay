@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function NewsText2() {
   return (
     <div className="blog_text_hero">
-      <img src="../src/data/blog/new_title.png" alt="" />
+      <img src="./data/blog/new_title.png" alt="" />
       <h2>straitPay Just Got Even Better!</h2>
       <p>
         In our end-of-the-year newsletter, we announced that we were working on
@@ -68,7 +68,7 @@ function NewsText2() {
           as WhatsApp, signal, or email, or they could simply scan your QR code.
         </li>
       </ul>
-      <img src="../src/data/blog/new_1.png" alt="" />
+      <img src="./data/blog/new_1.png" alt="" />
       <p>
         So, what are you waiting for? <Link to="">Upgrade</Link> to the latest
         version of the straitPay app today and start experiencing all of these

@@ -5,7 +5,7 @@ function BlogText3() {
   return (
     <>
       <div className="blog_text_hero">
-        <img src="../src/data/blog/buy_1.png" alt="" />
+        <img src="./data/blog/buy_1.png" alt="" />
         <p>
           Having an abundance of money is something we all dream of and aspire
           to achieve. Who doesn't like money? Who doesn’t like enjoyment? We
@@ -64,7 +64,7 @@ function BlogText3() {
           no amount of money is ever enough. Living life just for money is like
           leading a race, but the game never comes to an end.
         </p>
-        <img src="../src/data/blog_2.png" alt="" />
+        <img src="./data/blog_2.png" alt="" />
         <h2 className="blog_text_h2">Money cannot buy happiness.</h2>
         <p>
           Money cannot also buy happiness. You may indeed be able to use money

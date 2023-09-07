@@ -6,11 +6,7 @@ function Business() {
   return (
     <>
       <div className="business_hero_bg">
-        <img
-          src="../src/icons/businessMap.svg"
-          alt=""
-          className="business_bg_img"
-        />
+        <img src="./icons/businessMap.svg" alt="" className="business_bg_img" />
         <div className="container">
           <div className="business_hero">
             <h2>
@@ -21,7 +17,7 @@ function Business() {
               Simplify Cross-Border Payments, Boost Efficiency, and Expand the
               Global Reach of your Business with straitPay.
             </p>
-            <img src="../src/icons/countries.svg" alt="" />
+            <img src="./icons/countries.svg" alt="" />
           </div>
         </div>
       </div>
@@ -80,27 +76,27 @@ function Business() {
           </div>
           <div className="expect_hero expect_business_hero">
             <ExpectItem
-              src="../src/icons/businessExpect1.svg"
+              src="./icons/businessExpect1.svg"
               text="Open a free straitPay business account and start transacting in minutes."
             />
             <ExpectItem
-              src="../src/icons/businessExpect2.svg"
+              src="./icons/businessExpect2.svg"
               text="Manage your business account wherever you are with just a click."
             />
             <ExpectItem
-              src="../src/icons/businessExpect3.svg"
+              src="./icons/businessExpect3.svg"
               text="Give customers simple ways to pay online."
             />
             <ExpectItem
-              src="../src/icons/businessExpect4.svg"
+              src="./icons/businessExpect4.svg"
               text="Get notified the second you pay, or get paid."
             />
             <ExpectItem
-              src="../src/icons/businessExpect5.svg"
+              src="./icons/businessExpect5.svg"
               text="Two-factor authentication to avoid unauthorized access."
             />
             <ExpectItem
-              src="../src/icons/businessExpect6.svg"
+              src="./icons/businessExpect6.svg"
               text="Great customer service experience."
             />
           </div>
@@ -112,11 +108,11 @@ function Business() {
           </div>
           <div className="awards_hero awards_business_hero">
             <div className="awards_left">
-              <img src="../src/data/home/awards1.png" alt="" />
+              <img src="./data/home/awards1.png" alt="" />
               <p>StartUp Award 2023</p>
             </div>
             <div className="awards_right">
-              <img src="../src/data/home/awards2.png" alt="" />
+              <img src="./data/home/awards2.png" alt="" />
               <p>StartUp Award 2023</p>
             </div>
           </div>
@@ -141,19 +137,19 @@ function Business() {
           </div>
           <div className="business_transact_bottom">
             <div className="business_transact_item">
-              <img src="../src/icons/transact1.svg" alt="" />
+              <img src="./icons/transact1.svg" alt="" />
               <p>NIGERIA</p>
             </div>
             <div className="business_transact_item">
-              <img src="../src/icons/transact2.svg" alt="" />
+              <img src="./icons/transact2.svg" alt="" />
               <p>GHANA</p>
             </div>
             <div className="business_transact_item">
-              <img src="../src/icons/transact3.svg" alt="" />
+              <img src="./icons/transact3.svg" alt="" />
               <p>SOUTH AFRICA</p>
             </div>
             <div className="business_transact_item">
-              <img src="../src/icons/transact4.svg" alt="" />
+              <img src="./icons/transact4.svg" alt="" />
               <p>KENYA</p>
             </div>
           </div>

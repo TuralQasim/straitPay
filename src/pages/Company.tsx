@@ -10,7 +10,7 @@ const Company: React.FC = () => {
         </div>
         <div className="history_text">
           <p>
-            <img src="../src/data/company/story.png" alt="" />
+            <img src="./data/company/story.png" alt="" />
             The COVID-19 pandemic was a strange and unsettling time for us all,
             the pace at which it moved, the lives it touched, those we lost, and
             the lucky ones who came out the other end, were something we hadn’t
@@ -54,7 +54,7 @@ const Company: React.FC = () => {
           </p>
         </div>
         <div className="mission_img">
-          <img src="../src/data/company/mission.png" alt="" />
+          <img src="./data/company/mission.png" alt="" />
         </div>
         <Transact />
       </div>

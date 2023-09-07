@@ -48,28 +48,28 @@ const Blog: React.FC = () => {
         </div>
         <div className="blog_hero">
           <BlogItem
-            src="../src/data/blog/support_title.png"
+            src="./data/blog/support_title.png"
             text="STRAITNEWS"
             title="5 Simple Ways To Support The Sub-Saharan African Economy"
             value={"0"}
             checkModal={checkModal}
           />
           <BlogItem
-            src="../src/data/blog/what_title.png"
+            src="./data/blog/what_title.png"
             text="FINANCE"
             title="What School Don’t Teach About Money"
             value={"1"}
             checkModal={checkModal}
           />
           <BlogItem
-            src="../src/data/blog/buy_title.png"
+            src="./data/blog/buy_title.png"
             text="FINANCE"
             title="5 Things Money Can’t Buy"
             value={"2"}
             checkModal={checkModal}
           />
           <BlogItem
-            src="../src/data/blog/international_title.png"
+            src="./data/blog/international_title.png"
             text="FINANCE"
             title="5 Things to Know About International Money Transfer"
             value={"3"}
@@ -85,28 +85,28 @@ const Blog: React.FC = () => {
         </div>
         <div className="blog_hero">
           <BlogItem
-            src="../src/data/blog/support_title.png"
+            src="./data/blog/support_title.png"
             text="STRAITNEWS"
             title="5 Simple Ways To Support The Sub-Saharan African Economy"
             value={"0"}
             checkModal={checkModal}
           />
           <BlogItem
-            src="../src/data/blog/what_title.png"
+            src="./data/blog/what_title.png"
             text="FINANCE"
             title="What School Don’t Teach About Money"
             checkModal={checkModal}
             value={"1"}
           />
           <BlogItem
-            src="../src/data/blog/buy_title.png"
+            src="./data/blog/buy_title.png"
             text="FINANCE"
             title="5 Things Money Can’t Buy"
             checkModal={checkModal}
             value={"2"}
           />
           <BlogItem
-            src="../src/data/blog/international_title.png"
+            src="./data/blog/international_title.png"
             text="FINANCE"
             title="5 Things to Know About International Money Transfer"
             checkModal={checkModal}
@@ -127,7 +127,7 @@ const Blog: React.FC = () => {
             </form>
           </div>
           <div className="subscribe_img">
-            <img src="../src/icons/subscribe.svg" alt="" />
+            <img src="./icons/subscribe.svg" alt="" />
           </div>
         </div>
       </div>

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function NewsText1() {
   return (
     <div className="blog_text_hero">
-      <img src="../src/data/blog/new_title.png" alt="" />
+      <img src="./data/blog/new_title.png" alt="" />
       <h2 className="blog_text_h2">
         STRAITPAY NAMED FINTECH STARTUP OF THE YEAR AT THE LONDON STARTUP AWARDS
         FINALS.

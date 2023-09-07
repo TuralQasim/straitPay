@@ -39,7 +39,7 @@ const Header: React.FC = () => {
       <div className="container">
         <header>
           <Link className="logo" to="/">
-            <img src="../src/icons/logo.svg" alt="" />
+            <img src="./icons/logo.svg" alt="" />
           </Link>
           <div className="pers_business">
             <NavLink

@@ -5,7 +5,7 @@ function BlogText1() {
   return (
     <>
       <div className="blog_text_hero">
-        <img src="../src/data/blog/support1.png" alt="" />
+        <img src="./data/blog/support1.png" alt="" />
         <p>
           Sub-Saharan Africa (Africa), home to more than 1 billion people, half
           of whom will be under 25 years old by 2050, is a diverse continent
@@ -69,7 +69,7 @@ function BlogText1() {
           any exciting charities or initiatives you would like straitPay to
           support or get involved in.
         </p>
-        <img src="../src/data/blog/support1.png" alt="" />
+        <img src="./data/blog/support1.png" alt="" />
         <h2 className="blog_text_h2"> Make A Difference For Africa</h2>
         <p>
           As economies recover from COVID-19's economic impacts, it's more

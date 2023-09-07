@@ -5,7 +5,7 @@ function BLogText4() {
   return (
     <>
       <div className="blog_text_hero">
-        <img src="../src/data/blog/international_1.png" alt="" />
+        <img src="./data/blog/international_1.png" alt="" />
         <p>
           Some of us have family and friends who may have japa’d from your home
           country in Africa. Japa’d, is a Nigerian slang for “migrated out for a
@@ -80,7 +80,7 @@ function BLogText4() {
             payout to your beneficiary.
           </li>
         </ul>
-        <img src="../src/data/blog/international_2.png" alt="" />
+        <img src="./data/blog/international_2.png" alt="" />
         <h2>The smooth solution - straitPay</h2>
         <p>
           Today you can send money to your loved ones in Africa seamlessly

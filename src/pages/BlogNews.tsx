@@ -47,28 +47,28 @@ const BlogNews: React.FC = () => {
         </div>
         <div className="blog_hero">
           <NewsItem
-            src="../src/data/blog/new_title.png"
+            src="./data/blog/new_title.png"
             text="STRAITNEWS"
             title="STRAITPAY NAMED FINTECH STARTUP OF THE YEAR AT THE LONDON STARTUP AWARDS FINALS."
             value={"0"}
             checkModal={checkModal}
           />
           <NewsItem
-            src="../src/data/blog/new_1.png"
+            src="./data/blog/new_1.png"
             text="FINANCE"
             title="straitPay Just Got Even Better!"
             value={"1"}
             checkModal={checkModal}
           />
           <NewsItem
-            src="../src/data/blog/new_title.png"
+            src="./data/blog/new_title.png"
             text="FINANCE"
             title="STRAITPAY NAMED FINTECH STARTUP OF THE YEAR AT THE LONDON STARTUP AWARDS FINALS. "
             value={"0"}
             checkModal={checkModal}
           />
           <NewsItem
-            src="../src/data/blog/new_1.png"
+            src="./data/blog/new_1.png"
             text="FINANCE"
             title="straitPay Just Got Even Better!"
             value={"1"}
@@ -84,28 +84,28 @@ const BlogNews: React.FC = () => {
         </div>
         <div className="blog_hero">
           <NewsItem
-            src="../src/data/blog/new_title.png"
+            src="./data/blog/new_title.png"
             text="STRAITNEWS"
             title="STRAITPAY NAMED FINTECH STARTUP OF THE YEAR AT THE LONDON STARTUP AWARDS FINALS. "
             value={"0"}
             checkModal={checkModal}
           />
           <NewsItem
-            src="../src/data/blog/new_1.png"
+            src="./data/blog/new_1.png"
             text="FINANCE"
             title="straitPay Just Got Even Better!"
             checkModal={checkModal}
             value={"1"}
           />
           <NewsItem
-            src="../src/data/blog/new_title.png"
+            src="./data/blog/new_title.png"
             text="FINANCE"
             title="STRAITPAY NAMED FINTECH STARTUP OF THE YEAR AT THE LONDON STARTUP AWARDS FINALS. "
             checkModal={checkModal}
             value={"0"}
           />
           <NewsItem
-            src="../src/data/blog/new_1.png"
+            src="./data/blog/new_1.png"
             text="FINANCE"
             title="straitPay Just Got Even Better!"
             checkModal={checkModal}
@@ -126,7 +126,7 @@ const BlogNews: React.FC = () => {
             </form>
           </div>
           <div className="subscribe_img">
-            <img src="../src/icons/subscribe.svg" alt="" />
+            <img src="./icons/subscribe.svg" alt="" />
           </div>
         </div>
       </div>

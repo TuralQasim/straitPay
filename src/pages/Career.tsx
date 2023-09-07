@@ -100,7 +100,7 @@ const Career: React.FC = () => {
             <h4>JOIN US ON THIS THRILLING ADVENTURE</h4>
           </div>
           <div className="who_img">
-            <img src="../src/data/career/who.png" alt="" />
+            <img src="./data/career/who.png" alt="" />
           </div>
         </div>
         <div className="life">

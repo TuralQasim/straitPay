@@ -4,7 +4,7 @@ function BlogText2() {
   return (
     <>
       <div className="blog_text_hero">
-        <img src="../src/data/blog/what1.png" alt="" />
+        <img src="./data/blog/what1.png" alt="" />
         <p>
           It is a fantastic idea to study at a school. People who understand
           things far better than you do provide you with knowledge and life
@@ -43,7 +43,7 @@ function BlogText2() {
           all part of the package. You must organize your savings in order to be
           financially able to invest.
         </p>
-        <img src="../src/data/blog/what2.png" alt="" />
+        <img src="./data/blog/what2.png" alt="" />
         <h2 className="blog_text_h2">Time is everything</h2>
         <p>
           Time is one of the most valuable commodities in our lives. We can't

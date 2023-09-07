@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
         <footer>
           <div className="footer_top">
             <div className="foot1">
-              <img src="../src/icons/logo.svg" alt="" />
+              <img src="./icons/logo.svg" alt="" />
               <p>
                 straitPay is a financial technology company that offers its
                 products and services in partnership with licenced entities in
@@ -62,26 +62,22 @@ const Footer: React.FC = () => {
                 </li>
                 <li>
                   <Link to="">
-                    Instagram{" "}
-                    <img src="../src/icons/arrow_right_top.svg" alt="" />
+                    Instagram <img src="./icons/arrow_right_top.svg" alt="" />
                   </Link>
                 </li>
                 <li>
                   <Link to="">
-                    Facebook{" "}
-                    <img src="../src/icons/arrow_right_top.svg" alt="" />
+                    Facebook <img src="./icons/arrow_right_top.svg" alt="" />
                   </Link>
                 </li>
                 <li>
                   <Link to="">
-                    LinkedIn{" "}
-                    <img src="../src/icons/arrow_right_top.svg" alt="" />
+                    LinkedIn <img src="./icons/arrow_right_top.svg" alt="" />
                   </Link>
                 </li>
                 <li>
                   <Link to="">
-                    Twitter{" "}
-                    <img src="../src/icons/arrow_right_top.svg" alt="" />
+                    Twitter <img src="./icons/arrow_right_top.svg" alt="" />
                   </Link>
                 </li>
               </ul>
