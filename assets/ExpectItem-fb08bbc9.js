@@ -1,1 +1,0 @@
-import{j as e}from"./index-4de948f9.js";const m=({src:s,text:t})=>e.jsxs("div",{className:"expect_item",children:[e.jsx("div",{className:"expect_item_img",children:e.jsx("img",{src:s,alt:""})}),e.jsx("p",{children:t})]});export{m as E};
