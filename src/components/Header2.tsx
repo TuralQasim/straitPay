@@ -6,7 +6,9 @@ import { GrFormClose } from "react-icons/gr";
 import { NavHashLink } from "react-router-hash-link";
 import { useLocation } from "react-router-dom";
 
+
 const Header2: React.FC = () => {
+
   const { pathname } = useLocation();
   const { hash } = useLocation();
   const [burgerOpen, setBurgerOpen] = useState<boolean>(false);
@@ -71,10 +73,6 @@ const Header2: React.FC = () => {
                   className={
                     hash == "#history_title_id" ? "active_hash" : "not_active"
                   }
-                  location={{
-                    pathname:
-                      document.location.pathname + document.location.hash,
-                  }}
                 >
                   Our Story
                 </NavHashLink>
@@ -84,10 +82,6 @@ const Header2: React.FC = () => {
                   className={
                     hash == "#mission_title_id" ? "active_hash" : "not_active"
                   }
-                  location={{
-                    pathname:
-                      document.location.pathname + document.location.hash,
-                  }}
                 >
                   Our Mission
                 </NavHashLink>
