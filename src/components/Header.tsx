@@ -73,7 +73,6 @@ const Header: React.FC = () => {
                   className={
                     hash == "#history_title_id" ? "active_hash" : "not_active"
                   }
-        
                 >
                   Our Story
                 </NavHashLink>
@@ -83,7 +82,6 @@ const Header: React.FC = () => {
                   className={
                     hash == "#mission_title_id" ? "active_hash" : "not_active"
                   }
-       
                 >
                   Our Mission
                 </NavHashLink>
@@ -127,6 +125,28 @@ const Header: React.FC = () => {
                     onClick={forCloseBurger}
                   />
                   <ul className="resp_navbar">
+                    <div className="pers_business">
+                      <NavLink
+                        to="/"
+                        className={
+                          pathname != "/business" && pathname != "/business"
+                            ? "personal_link"
+                            : ""
+                        }
+                      >
+                        Personal
+                      </NavLink>
+                      <NavLink
+                        to="/business"
+                        className={
+                          pathname == "/business" && pathname == "/business"
+                            ? "business_link"
+                            : ""
+                        }
+                      >
+                        Business
+                      </NavLink>
+                    </div>
                     <NavLink to="/" onClick={() => setBurgerOpen(false)}>
                       Home
                     </NavLink>

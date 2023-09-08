@@ -6,9 +6,7 @@ import { GrFormClose } from "react-icons/gr";
 import { NavHashLink } from "react-router-hash-link";
 import { useLocation } from "react-router-dom";
 
-
 const Header2: React.FC = () => {
-
   const { pathname } = useLocation();
   const { hash } = useLocation();
   const [burgerOpen, setBurgerOpen] = useState<boolean>(false);
@@ -41,7 +39,7 @@ const Header2: React.FC = () => {
           <Link className="logo" to="/">
             <img src="./icons/logo.svg" alt="" />
           </Link>
-          <div className="pers_business">
+          <div className="pers_business pers_business2">
             <NavLink
               to="/"
               className={
@@ -143,6 +141,28 @@ const Header2: React.FC = () => {
                     onClick={forCloseBurger}
                   />
                   <ul className="resp_navbar">
+                    <div className="pers_business pers_business2">
+                      <NavLink
+                        to="/"
+                        className={
+                          pathname != "/business" && pathname != "/business"
+                            ? "personal_link"
+                            : ""
+                        }
+                      >
+                        Personal
+                      </NavLink>
+                      <NavLink
+                        to="/business"
+                        className={
+                          pathname == "/business" && pathname == "/business"
+                            ? "business_link"
+                            : ""
+                        }
+                      >
+                        Business
+                      </NavLink>
+                    </div>
                     <NavLink to="/" onClick={() => setBurgerOpen(false)}>
                       Home
                     </NavLink>

@@ -36,7 +36,7 @@ const Header2: React.FC = () => {
     <>
       <div className="container">
         <header>
-          <Link className="logo" to="/">
+          <Link className="logo" to="/business">
             <img src="./icons/logo.svg" alt="" />
           </Link>
           <div className="pers_business">
@@ -71,7 +71,6 @@ const Header2: React.FC = () => {
                   className={
                     hash == "#history_title_id" ? "active_hash" : "not_active"
                   }
-              
                 >
                   Our Story
                 </NavHashLink>
@@ -81,7 +80,6 @@ const Header2: React.FC = () => {
                   className={
                     hash == "#mission_title_id" ? "active_hash" : "not_active"
                   }
-          
                 >
                   Our Mission
                 </NavHashLink>
@@ -118,14 +116,38 @@ const Header2: React.FC = () => {
                   exit={{
                     y: "-100%",
                   }}
-                  className="burger burger2"
+                  className="burger burger3"
                 >
                   <GrFormClose
                     className="burger_close_btn"
                     onClick={forCloseBurger}
                   />
                   <ul className="resp_navbar">
-                    <NavLink to="/" onClick={() => setBurgerOpen(false)}>
+                    <div className="pers_business">
+                      <NavLink
+                        to="/"
+                        className={
+                          pathname != "/business" &&
+                          pathname != "/faqs-business"
+                            ? "personal_link"
+                            : ""
+                        }
+                      >
+                        Personal
+                      </NavLink>
+                      <NavLink
+                        to="/business"
+                        className={
+                          pathname == "/business" ||
+                          pathname == "/faqs-business"
+                            ? "business_link"
+                            : ""
+                        }
+                      >
+                        Business
+                      </NavLink>
+                    </div>
+                    <NavLink to="/business" onClick={() => setBurgerOpen(false)}>
                       Home
                     </NavLink>
                     <NavHashLink
@@ -155,18 +177,11 @@ const Header2: React.FC = () => {
                     <NavLink to="/career" onClick={() => setBurgerOpen(false)}>
                       Career
                     </NavLink>
-                    <NavLink to="/faqs" onClick={() => setBurgerOpen(false)}>
+                    <NavLink to="/faqs-business" onClick={() => setBurgerOpen(false)}>
                       FAQs
                     </NavLink>
                     <NavLink to="/account" onClick={() => setBurgerOpen(false)}>
                       Account
-                    </NavLink>
-                    <NavLink
-                      className="news_active"
-                      to={pathname === "/blog" ? "/blog-news" : "/blog"}
-                      onClick={() => setBurgerOpen(false)}
-                    >
-                      {pathname === "/blog" ? "straitNews" : "All topics"}
                     </NavLink>
                   </ul>
                   <div className="sign_in_up">

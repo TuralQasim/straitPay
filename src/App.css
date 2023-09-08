@@ -82,7 +82,7 @@ header {
 } */
 .navbar {
   margin-right: auto;
-  margin-left: 150px !important;
+  margin-left: 100px !important;
   display: flex;
   justify-content: flex-start;
   gap: 15px;
@@ -1497,7 +1497,7 @@ footer {
   background-color: #f2f2f2;
 }
 .faqs_item p {
-  font-family: Neurial Grotesk;
+  font-family: "Neurial Grotesk";
   font-size: 24px;
   font-weight: 400;
   line-height: 32px;
@@ -1505,11 +1505,13 @@ footer {
   text-align: left;
   color: #0e0f0c;
   pointer-events: none;
+  width: 90%;
 }
 .faqs_item svg {
   color: #d60c94;
   font-size: 18px;
   pointer-events: none;
+  width: 10%;
 }
 .faqs_modal h2 {
   font-family: "Neurial Grotesk";
@@ -2417,7 +2419,7 @@ footer {
   z-index: 5;
 }
 .faqs_question h2 {
-  font-family: Alfa Slab One;
+  font-family: "Alfa Slab One";
   font-size: 72px;
   font-weight: 500;
   line-height: 72px;
@@ -2658,6 +2660,9 @@ footer {
   align-items: center;
   gap: 10px;
 }
+.pers_business2{
+  margin-left: 20px !important;
+}
 .pers_business a {
   color: #0e0f0c;
 }
@@ -2674,4 +2679,35 @@ footer {
 .personal_link:hover,
 .business_link:hover {
   color: #ffffff;
+}
+.resp_navbar .pers_business{
+  margin-left: 0;
+  transform: translate(-10px, -10px);
+  display: none;
+}
+.navbar2{
+  margin-left: 40px !important;
+}
+.resp_navbar .pers_business2{
+  margin-left: 0 !important;
+}
+.foot1_icons{
+  width: 100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-direction: row;
+}
+.foot1_icons a{
+  padding: 15px;
+  background-color: #0e0f0c;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap: 2px;
+  width: 50% !important;
+  font-size: 14px;
+}
+.foot2 .foot1_icons{
+  display: none;
 }
