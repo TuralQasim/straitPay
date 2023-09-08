@@ -26,6 +26,7 @@ const KYC = lazy(() => import("./pages/KYC"));
 const BlogNews = lazy(() => import("./pages/BlogNews"));
 const FaqsBusiness = lazy(() => import("./pages/FaqsBusiness"));
 const Business = lazy(() => import("./pages/Business"));
+const BusinessRegister = lazy(() => import("./pages/BusinessRegister"));
 
 function App() {
   const location = useLocation();
@@ -36,6 +37,7 @@ function App() {
     "/verificate",
     "/transaction",
     "/kyc",
+    "/business-register",
   ];
   const shouldHideHeaderFooter = hideHeaderFooterRoutes.includes(
     location.pathname
@@ -48,6 +50,10 @@ function App() {
     {
       path: "/",
       element: <Home />,
+    },
+    {
+      path: "/business-register",
+      element: <BusinessRegister />,
     },
     {
       path: "/kyc",

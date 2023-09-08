@@ -5,8 +5,12 @@ import { AnimatePresence, motion } from "framer-motion";
 import { GrFormClose } from "react-icons/gr";
 import { NavHashLink } from "react-router-hash-link";
 import { useLocation } from "react-router-dom";
+import { connect } from "react-redux";
 
-const Header2: React.FC = () => {
+type HeaderType = {
+  dispatch: any;
+};
+const Header3: React.FC<HeaderType> = ({ dispatch }) => {
   const { pathname } = useLocation();
   const { hash } = useLocation();
   const [burgerOpen, setBurgerOpen] = useState<boolean>(false);
@@ -32,6 +36,18 @@ const Header2: React.FC = () => {
   } else {
     enableScroll();
   }
+  const changeBusinessTrue = () => {
+    dispatch({
+      type: "BUSINESS",
+      payload: true,
+    });
+  };
+  const changeBusinessFalse = () => {
+    dispatch({
+      type: "BUSINESS",
+      payload: false,
+    });
+  };
   return (
     <>
       <div className="container">
@@ -42,6 +58,7 @@ const Header2: React.FC = () => {
           <div className="pers_business">
             <NavLink
               to="/"
+              onClick={changeBusinessFalse}
               className={
                 pathname != "/business" && pathname != "/faqs-business"
                   ? "personal_link"
@@ -52,6 +69,7 @@ const Header2: React.FC = () => {
             </NavLink>
             <NavLink
               to="/business"
+              onClick={changeBusinessTrue}
               className={
                 pathname == "/business" || pathname == "/faqs-business"
                   ? "business_link"
@@ -126,6 +144,7 @@ const Header2: React.FC = () => {
                     <div className="pers_business">
                       <NavLink
                         to="/"
+                        onClick={changeBusinessFalse}
                         className={
                           pathname != "/business" &&
                           pathname != "/faqs-business"
@@ -137,6 +156,7 @@ const Header2: React.FC = () => {
                       </NavLink>
                       <NavLink
                         to="/business"
+                        onClick={changeBusinessTrue}
                         className={
                           pathname == "/business" ||
                           pathname == "/faqs-business"
@@ -147,7 +167,10 @@ const Header2: React.FC = () => {
                         Business
                       </NavLink>
                     </div>
-                    <NavLink to="/business" onClick={() => setBurgerOpen(false)}>
+                    <NavLink
+                      to="/business"
+                      onClick={() => setBurgerOpen(false)}
+                    >
                       Home
                     </NavLink>
                     <NavHashLink
@@ -177,7 +200,10 @@ const Header2: React.FC = () => {
                     <NavLink to="/career" onClick={() => setBurgerOpen(false)}>
                       Career
                     </NavLink>
-                    <NavLink to="/faqs-business" onClick={() => setBurgerOpen(false)}>
+                    <NavLink
+                      to="/faqs-business"
+                      onClick={() => setBurgerOpen(false)}
+                    >
                       FAQs
                     </NavLink>
                     <NavLink to="/account" onClick={() => setBurgerOpen(false)}>
@@ -211,4 +237,5 @@ const Header2: React.FC = () => {
   );
 };
 
-export default Header2;
+const t = (a) => a;
+export default connect(t)(Header3);

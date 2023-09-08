@@ -4,17 +4,21 @@ import { IoIosArrowBack } from "react-icons/io";
 import { FaXmark } from "react-icons/fa6";
 import { BsEyeSlash } from "react-icons/bs";
 import { BsEye } from "react-icons/bs";
+import { connect } from "react-redux";
 
 type valuesType = {
-  pass: string;
-  mail: string;
+  pass: string | null;
+  mail: string | null;
 };
-const Login: React.FC = () => {
+type LoginType = {
+  business: boolean;
+};
+const Login: React.FC<LoginType> = ({ business }) => {
   const [pass, setPass] = useState<boolean>(false);
   const checkPass = () => {
     setPass((pass) => !pass);
   };
-  const [values, setValues] = useState<valuesType>({ pass: "", mail: "" });
+  const [values, setValues] = useState<valuesType>({ pass: null, mail: null });
   const changeValues = (e: React.ChangeEvent) => {
     const type = e.target.getAttribute("type");
     setValues((value: valuesType) => {
@@ -64,10 +68,18 @@ const Login: React.FC = () => {
               )}
             </label>
             {apply && (
-              <h6 className="error_text">Mail or password is incorrect</h6>
+              <h6
+                className={
+                  business ? "error_text error_text_business" : "error_text"
+                }
+              >
+                Mail or password is incorrect
+              </h6>
             )}
             <Link
-              className="submit_btn"
+              className={
+                business ? "submit_btn submit_btn_business" : "submit_btn"
+              }
               to={values.mail && values.pass ? "/userAccount" : ""}
               onClick={checkApply}
             >
@@ -75,15 +87,19 @@ const Login: React.FC = () => {
             </Link>
             <p className="dont_have">
               Don’t have an account?
-              <Link to="/register">Create Account</Link>
+              <Link to="/register" className={business ? "business_log_link" : ""}>
+                Create Account
+              </Link>
             </p>
-            <Link to="/reset">Forgot Password?</Link>
+            <Link to="/reset" className={business ? "business_log_link" : ""}>
+              Forgot Password?
+            </Link>
           </div>
-          <Link className="standart_back" to="/">
+          <Link className="standart_back" to={business ? "/business" : "/"}>
             <IoIosArrowBack />
             Back
           </Link>
-          <Link className="standart_close" to="/">
+          <Link className="standart_close" to={business ? "/business" : "/"}>
             <FaXmark />
           </Link>
         </div>
@@ -92,4 +108,5 @@ const Login: React.FC = () => {
   );
 };
 
-export default Login;
+const t = (a) => a;
+export default connect(t)(Login);

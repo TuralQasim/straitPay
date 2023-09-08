@@ -2660,7 +2660,7 @@ footer {
   align-items: center;
   gap: 10px;
 }
-.pers_business2{
+.pers_business2 {
   margin-left: 20px !important;
 }
 .pers_business a {
@@ -2680,34 +2680,44 @@ footer {
 .business_link:hover {
   color: #ffffff;
 }
-.resp_navbar .pers_business{
+.resp_navbar .pers_business {
   margin-left: 0;
   transform: translate(-10px, -10px);
   display: none;
 }
-.navbar2{
+.navbar2 {
   margin-left: 40px !important;
 }
-.resp_navbar .pers_business2{
+.resp_navbar .pers_business2 {
   margin-left: 0 !important;
 }
-.foot1_icons{
+.foot1_icons {
   width: 100%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   flex-direction: row;
 }
-.foot1_icons a{
+.foot1_icons a {
   padding: 15px;
   background-color: #0e0f0c;
-  display:flex;
-  justify-content:center;
-  align-items:center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 2px;
   width: 50% !important;
   font-size: 14px;
 }
-.foot2 .foot1_icons{
+.foot2 .foot1_icons {
   display: none;
+}
+.business_log_link {
+  color: #544e9e !important;
+  background-color: transparent !important;
+}
+.submit_btn_business {
+  background-color: #544e9e;
+}
+.error_text_business {
+  color: #544e9e;
 }
