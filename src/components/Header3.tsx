@@ -111,7 +111,7 @@ const Header3: React.FC<HeaderType> = ({ dispatch }) => {
             <Link className="sign_in" to="/login">
               Sign In
             </Link>
-            <Link className="sign_up" to="/register">
+            <Link className="sign_up" to="/business-register">
               Sign Up
             </Link>
           </div>
@@ -219,7 +219,7 @@ const Header3: React.FC<HeaderType> = ({ dispatch }) => {
                       Sign In
                     </Link>
                     <Link
-                      to=""
+                      to="/business-register"
                       className="sign_up"
                       onClick={() => setBurgerOpen(false)}
                     >

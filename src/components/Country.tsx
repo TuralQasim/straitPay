@@ -253,7 +253,9 @@ const Country: React.FC<CountryProps> = ({ setCurrentStep }) => {
             )}
           </div>
         </label>
-        <button onClick={() => setCurrentStep((prevStep) => prevStep + 1)}>
+        <button
+          onClick={() => setCurrentStep((prevStep: number) => prevStep + 1)}
+        >
           Next
         </button>
       </div>
