@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { AnimatePresence, motion } from "framer-motion";
 import { Formik } from "formik";
 import * as yup from "yup";
+import { useClickOutSide } from "../hooks/useClickOutSide";
 
 type EmailProps = {
   setCurrentStep?: any;
@@ -257,6 +258,10 @@ const Email: React.FC<EmailProps> = ({
       .required("required Input"),
     code: yup.number().typeError("Type only number").required("required Input"),
   });
+  const numberRef = useRef(null);
+  useClickOutSide(numberRef, () => {
+    setDropOpen(false);
+  });
   return (
     <>
       {!verified ? (
@@ -321,6 +326,7 @@ const Email: React.FC<EmailProps> = ({
                             y: "40px",
                           }}
                           className="prefics_dropdown"
+                          ref={numberRef}
                         >
                           {countryPhoneData.map((a, i) => {
                             return (

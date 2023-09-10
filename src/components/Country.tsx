@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { IoIosArrowDown } from "react-icons/io";
+import { useClickOutSide } from "../hooks/useClickOutSide";
 
 type CountryProps = {
   setCurrentStep: any;
@@ -216,6 +217,10 @@ const Country: React.FC<CountryProps> = ({ setCurrentStep }) => {
       setCheckedCountry(text);
     }
   };
+  const countryRef = useRef(null);
+  useClickOutSide(countryRef, () => {
+    setDropOpen(false);
+  });
   return (
     <>
       <form className="standart_form">
@@ -240,6 +245,7 @@ const Country: React.FC<CountryProps> = ({ setCurrentStep }) => {
                     y: "20px",
                   }}
                   className="country_dropdown"
+                  ref={countryRef}
                 >
                   {countries.map((a, i) => {
                     return (

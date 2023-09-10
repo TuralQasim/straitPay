@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { connect } from "react-redux";
 import { FaXmark } from "react-icons/fa6";
 import { IoIosArrowBack } from "react-icons/io";
@@ -8,6 +8,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Dispatch } from "redux";
 import { Formik } from "formik";
 import * as yup from "yup";
+import { useClickOutSide } from "../hooks/useClickOutSide";
 
 type AppState = {
   verified: boolean;
@@ -255,6 +256,10 @@ const Verificate: React.FC<VerificateProps> = ({ isVerified, dispatch }) => {
       .required("required Input"),
     num: yup.number().typeError("Type only number").required("required Input"),
   });
+  const numberRef = useRef(null);
+  useClickOutSide(numberRef, () => {
+    setDropOpen(false);
+  });
   return (
     <>
       <div className="container">
@@ -322,6 +327,7 @@ const Verificate: React.FC<VerificateProps> = ({ isVerified, dispatch }) => {
                                 y: "40px",
                               }}
                               className="prefics_dropdown"
+                              ref={numberRef}
                             >
                               {countryPhoneData.map((a, i) => {
                                 return (

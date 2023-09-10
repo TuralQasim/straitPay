@@ -1,8 +1,9 @@
 import { AnimatePresence, motion } from "framer-motion";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { Formik } from "formik";
 import * as yup from "yup";
+import { useClickOutSide } from "../hooks/useClickOutSide";
 
 type BusinessInfo = {
   setCurrentStep: any;
@@ -308,6 +309,30 @@ const BusinessInfo: React.FC<BusinessInfo> = ({ setCurrentStep }) => {
   const validationsSchema = yup.object().shape({
     name: yup.string().required("required Input"),
   });
+  const countryRef = useRef(null);
+  useClickOutSide(countryRef, () => {
+    setDropOpen({
+      type: false,
+      activity: false,
+      country: false,
+    });
+  });
+  const typeRef = useRef(null);
+  useClickOutSide(typeRef, () => {
+    setDropOpen({
+      type: false,
+      activity: false,
+      country: false,
+    });
+  });
+  const activityRef = useRef(null);
+  useClickOutSide(activityRef, () => {
+    setDropOpen({
+      type: false,
+      activity: false,
+      country: false,
+    });
+  });
   return (
     <>
       <div className="standart_form standart_form_margin">
@@ -366,6 +391,7 @@ const BusinessInfo: React.FC<BusinessInfo> = ({ setCurrentStep }) => {
                     y: "40px",
                   }}
                   className="country_dropdown"
+                  ref={typeRef}
                 >
                   <li data-value="type" onClick={checkCountry}>
                     Private
@@ -402,6 +428,7 @@ const BusinessInfo: React.FC<BusinessInfo> = ({ setCurrentStep }) => {
                     y: "40px",
                   }}
                   className="country_dropdown"
+                  ref={activityRef}
                 >
                   <li data-value="activity" onClick={checkCountry}>
                     Finance
@@ -434,6 +461,7 @@ const BusinessInfo: React.FC<BusinessInfo> = ({ setCurrentStep }) => {
                     y: "20px",
                   }}
                   className="country_dropdown"
+                  ref={countryRef}
                 >
                   {countries.map((a, i) => {
                     return (

@@ -1,11 +1,12 @@
 import { AnimatePresence, motion } from "framer-motion";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { IoIosArrowBack } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { IoIosArrowDown } from "react-icons/io";
 import { connect } from "react-redux";
 import { FaXmark } from "react-icons/fa6";
 import { Dispatch } from "redux";
+import { useClickOutSide } from "../hooks/useClickOutSide";
 
 type AppState = {
   verified: boolean;
@@ -53,6 +54,10 @@ const KYC: React.FC<KYCProps> = ({ dispatch }) => {
       setBack(true);
     }
   };
+  const idRef = useRef(null);
+  useClickOutSide(idRef, () => {
+    setDropOpen(false);
+  });
   return (
     <>
       <div className="container">
@@ -86,6 +91,7 @@ const KYC: React.FC<KYCProps> = ({ dispatch }) => {
                         y: "40px",
                       }}
                       className="country_dropdown id_dropdown"
+                      ref={idRef}
                     >
                       <li onClick={checkID}>National ID Card</li>
                       <li onClick={checkID}>Pasport</li>

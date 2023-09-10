@@ -1,8 +1,9 @@
 import { AnimatePresence, motion } from "framer-motion";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { Formik } from "formik";
 import * as yup from "yup";
+import { useClickOutSide } from "../hooks/useClickOutSide";
 
 type AccountProps = {
   setCurrentStep: any;
@@ -32,6 +33,10 @@ const Account: React.FC<AccountProps> = ({ setCurrentStep }) => {
       .string()
       .typeError("Type correct Email")
       .required("required Input"),
+  });
+  const genderRef = useRef(null);
+  useClickOutSide(genderRef, () => {
+    setDropOpen(false);
   });
   return (
     <>
@@ -106,6 +111,7 @@ const Account: React.FC<AccountProps> = ({ setCurrentStep }) => {
                         y: "40px",
                       }}
                       className="gender_dropdown"
+                      ref={genderRef}
                     >
                       <li onClick={checkGender}>Male</li>
                       <li onClick={checkGender}>Famale</li>

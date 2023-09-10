@@ -1,9 +1,10 @@
 import { AnimatePresence, motion } from "framer-motion";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { Formik } from "formik";
 import * as yup from "yup";
+import { useClickOutSide } from "../hooks/useClickOutSide";
 
 type Data = {
   name: string;
@@ -238,6 +239,10 @@ const BusinessContact: React.FC<BusinessContactProps> = ({
       .typeError("Type only number")
       .required("required Input"),
   });
+  const numberRef = useRef(null);
+  useClickOutSide(numberRef, () => {
+    setDropOpen(false);
+  });
   return (
     <>
       <Formik
@@ -286,6 +291,7 @@ const BusinessContact: React.FC<BusinessContactProps> = ({
                           y: "40px",
                         }}
                         className="prefics_dropdown"
+                        ref={numberRef}
                       >
                         {countryPhoneData.map((a, i) => {
                           return (
