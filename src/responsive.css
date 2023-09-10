@@ -1020,6 +1020,41 @@
     font-size: 16px;
     width: 200px !important;
   }
+  .flaqs_768 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  .flags_country {
+    width: 100%;
+    margin: 50px auto 20px;
+  }
+  .previous_flag_btn,
+  .next_flag_btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #544e9e;
+    position: relative;
+    cursor: pointer;
+  }
+  .previous_flag_btn svg,
+  .next_flag_btn svg {
+    font-size: 36px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffffff;
+    pointer-events: none;
+  }
+  .flaqs_wrapper .previous_flag_btn,
+  .flaqs_wrapper .next_flag_btn {
+    display: none !important;
+  }
 }
 @media screen and (max-width: 480px) {
   header > .sign_in_up {
@@ -1768,8 +1803,57 @@
     font-size: 14px;
     width: 100% !important;
   }
-  .foot1_icons a img{
+  .foot1_icons a img {
     transform: scale(0.8);
+  }
+  .flaqs_768 {
+    margin-bottom: 20px;
+  }
+  .flags_country {
+    width: 100%;
+    margin: 30px auto 20px;
+  }
+  .previous_flag_btn,
+  .next_flag_btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #544e9e;
+    position: relative;
+    cursor: pointer;
+  }
+  .previous_flag_btn svg,
+  .next_flag_btn svg {
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffffff;
+    pointer-events: none;
+  }
+  .flaqs_wrapper .previous_flag_btn,
+  .flaqs_wrapper .next_flag_btn {
+    display: none !important;
+  }
+  .flag_item {
+    padding: 25px;
+    border-radius: 50%;
+    background-color: #f7f7f7;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+  }
+  .flag_item img {
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
   }
 }
 @media screen and (max-width: 320px) {
@@ -1877,7 +1961,7 @@
     font-size: 12px;
     width: 100% !important;
   }
-  .foot1_icons a img{
+  .foot1_icons a img {
     transform: scale(0.8);
   }
 }

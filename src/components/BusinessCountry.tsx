@@ -38,7 +38,9 @@ const BusinessCountry: React.FC<BusinessCountryProps> = ({
           <div className="flags flags_country">
             <div
               className={
-                currentFlag == 1 ? "flag_item flag_item_active_country" : "flag_item"
+                currentFlag == 1
+                  ? "flag_item flag_item_active_country"
+                  : "flag_item"
               }
               data-value="1"
             >
@@ -46,7 +48,9 @@ const BusinessCountry: React.FC<BusinessCountryProps> = ({
             </div>
             <div
               className={
-                currentFlag == 2 ? "flag_item flag_item_active_country" : "flag_item"
+                currentFlag == 2
+                  ? "flag_item flag_item_active_country"
+                  : "flag_item"
               }
               data-value="2"
             >
@@ -54,7 +58,9 @@ const BusinessCountry: React.FC<BusinessCountryProps> = ({
             </div>
             <div
               className={
-                currentFlag == 3 ? "flag_item flag_item_active_country" : "flag_item"
+                currentFlag == 3
+                  ? "flag_item flag_item_active_country"
+                  : "flag_item"
               }
               data-value="3"
             >
@@ -62,7 +68,9 @@ const BusinessCountry: React.FC<BusinessCountryProps> = ({
             </div>
             <div
               className={
-                currentFlag == 4 ? "flag_item flag_item_active_country" : "flag_item"
+                currentFlag == 4
+                  ? "flag_item flag_item_active_country"
+                  : "flag_item"
               }
               data-value="4"
             >
@@ -70,7 +78,9 @@ const BusinessCountry: React.FC<BusinessCountryProps> = ({
             </div>
             <div
               className={
-                currentFlag == 5 ? "flag_item flag_item_active_country" : "flag_item"
+                currentFlag == 5
+                  ? "flag_item flag_item_active_country"
+                  : "flag_item"
               }
               data-value="5"
             >
@@ -81,7 +91,14 @@ const BusinessCountry: React.FC<BusinessCountryProps> = ({
             <IoIosArrowForward />
           </div>
         </div>
-
+        <div className="flaqs_768">
+          <div className="previous_flag_btn" onClick={decValue}>
+            <IoIosArrowBack />
+          </div>
+          <div className="next_flag_btn" onClick={incValue}>
+            <IoIosArrowForward />
+          </div>
+        </div>
         <button
           className="business_next_btn"
           style={{ backgroundColor: "#544e9e" }}
