@@ -44,7 +44,7 @@ const Business: React.FC<BusinessType> = ({ dispatch, coming }) => {
                 </p>
               </div>
               <div className="coming_btns">
-                <Link to="">Sign Up</Link>
+                <Link to="https://forms.gle/koBhYeiT9huog5og8">Sign Up</Link>
                 <button onClick={closeComing}>Close</button>
               </div>
             </div>
