@@ -1,6 +1,8 @@
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
+import { Formik } from "formik";
+import * as yup from "yup";
 
 type BusinessInfo = {
   setCurrentStep: any;
@@ -303,17 +305,49 @@ const BusinessInfo: React.FC<BusinessInfo> = ({ setCurrentStep }) => {
       });
     }
   };
+  const validationsSchema = yup.object().shape({
+    name: yup.string().required("required Input"),
+  });
   return (
     <>
       <div className="standart_form standart_form_margin">
-        <label htmlFor="">
-          <p>Business Name</p>
-          <input
-            type="text"
-            className="business_name"
-            placeholder="Type business name"
-          />
-        </label>
+        <Formik
+          initialValues={{
+            name: "",
+          }}
+          validateOnBlur
+          onSubmit={(values) => {
+            console.log(values);
+          }}
+          validationSchema={validationsSchema}
+        >
+          {({
+            values,
+            errors,
+            touched,
+            handleChange,
+            handleBlur,
+            isValid,
+            handleSubmit,
+            dirty,
+          }) => (
+            <label htmlFor="name" className="email_input">
+              <p>Business Name</p>
+              <input
+                type="text"
+                name="name"
+                onChange={handleChange}
+                onBlur={handleBlur}
+                value={values.name}
+                className="business_name"
+                placeholder="Type business name"
+              />
+              {touched.name && errors.name && (
+                <p className="standart_error_text">{errors.name}</p>
+              )}
+            </label>
+          )}
+        </Formik>
         <label htmlFor="">
           <p>Business Type</p>
           <div className="country" onClick={checkDropOpen} data-value="type">

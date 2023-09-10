@@ -5,6 +5,8 @@ import { FaXmark } from "react-icons/fa6";
 import { BsEyeSlash } from "react-icons/bs";
 import { BsEye } from "react-icons/bs";
 import { connect } from "react-redux";
+import { Formik } from "formik";
+import * as yup from "yup";
 
 type valuesType = {
   pass: string | null;
@@ -13,33 +15,19 @@ type valuesType = {
 type LoginType = {
   business: boolean;
 };
+type FormikProps = {
+  email: string;
+  pass: string;
+};
 const Login: React.FC<LoginType> = ({ business }) => {
+  const validationsSchema = yup.object().shape({
+    email: yup.string().email("Type correct Email").required("required Input"),
+    pass: yup.string().typeError("").required("required Input"),
+  });
   const [pass, setPass] = useState<boolean>(false);
+  const [to, setTo] = useState<boolean>(false);
   const checkPass = () => {
     setPass((pass) => !pass);
-  };
-  const [values, setValues] = useState<valuesType>({ pass: null, mail: null });
-  const changeValues = (e: React.ChangeEvent) => {
-    const type = e.target.getAttribute("type");
-    setValues((value: valuesType) => {
-      const target = e.target as HTMLInputElement;
-      const text: string | undefined = target?.value || undefined;
-      if (type === "email") {
-        const mail = text || "";
-        return { ...value, mail };
-      } else {
-        const pass = text || "";
-        return { ...value, pass };
-      }
-    });
-  };
-  const [apply, setApply] = useState<boolean>(false);
-  const checkApply = () => {
-    if (values.pass == "" || values.mail == "") {
-      setApply(true);
-    } else {
-      return;
-    }
   };
   return (
     <>
@@ -49,52 +37,90 @@ const Login: React.FC<LoginType> = ({ business }) => {
             <h2>Login to Your Account</h2>
             <p>Login your straitPay account to access your dashboard</p>
           </div>
-          <div className="standart_form">
-            <label htmlFor="">
-              <p>Enter Email Address or Phone Number</p>
-              <input type="email" value={values.mail} onChange={changeValues} />
-            </label>
-            <label htmlFor="" className="pass_label">
-              <p>Enter PIN</p>
-              <input
-                type={pass ? "text" : "password"}
-                value={values.pass}
-                onChange={changeValues}
-              />
-              {pass ? (
-                <BsEye onClick={checkPass} />
-              ) : (
-                <BsEyeSlash onClick={checkPass} />
-              )}
-            </label>
-            {apply && (
-              <h6
-                className={
-                  business ? "error_text error_text_business" : "error_text"
-                }
-              >
-                Mail or password is incorrect
-              </h6>
+          <Formik
+            initialValues={{
+              email: "",
+              pass: "",
+            }}
+            validateOnBlur
+            onSubmit={(values) => {
+              setTo(true);
+            }}
+            validationSchema={validationsSchema}
+          >
+            {({
+              values,
+              errors,
+              touched,
+              handleChange,
+              handleBlur,
+              isValid,
+              handleSubmit,
+              dirty,
+            }) => (
+              <form className="standart_form">
+                <label htmlFor="email" className="email_input">
+                  <p>Enter Email Address or Phone Number</p>
+                  <input
+                    type="email"
+                    name="email"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={values.email}
+                    // value={values.mail}
+                    // onChange={changeValues}
+                  />
+                  {touched.email && errors.email && (
+                    <p className="standart_error_text">{errors.email}</p>
+                  )}
+                </label>
+                <label htmlFor="pass" className="pass_label">
+                  <p>Enter PIN</p>
+                  <input
+                    type={pass ? "text" : "password"}
+                    value={values.pass}
+                    name="pass"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                  />
+                  {pass ? (
+                    <BsEye onClick={checkPass} />
+                  ) : (
+                    <BsEyeSlash onClick={checkPass} />
+                  )}
+                  {touched.pass && errors.pass && (
+                    <p className="standart_error_text">{errors.pass}</p>
+                  )}
+                </label>
+                <Link
+                  disabled={!isValid && !dirty}
+                  className={
+                    business ? "submit_btn submit_btn_business" : "submit_btn"
+                  }
+                  to={to ? "/userAccount" : ""}
+                  type="submit"
+                  onClick={handleSubmit}
+                >
+                  Login
+                </Link>
+                <p className="dont_have">
+                  Don’t have an account?
+                  <Link
+                    to="/register"
+                    className={business ? "business_log_link" : ""}
+                  >
+                    Create Account
+                  </Link>
+                </p>
+                <Link
+                  to="/reset"
+                  className={business ? "business_log_link" : ""}
+                >
+                  Forgot Password?
+                </Link>
+              </form>
             )}
-            <Link
-              className={
-                business ? "submit_btn submit_btn_business" : "submit_btn"
-              }
-              to={values.mail && values.pass ? "/userAccount" : ""}
-              onClick={checkApply}
-            >
-              Login
-            </Link>
-            <p className="dont_have">
-              Don’t have an account?
-              <Link to="/register" className={business ? "business_log_link" : ""}>
-                Create Account
-              </Link>
-            </p>
-            <Link to="/reset" className={business ? "business_log_link" : ""}>
-              Forgot Password?
-            </Link>
-          </div>
+          </Formik>
           <Link className="standart_back" to={business ? "/business" : "/"}>
             <IoIosArrowBack />
             Back

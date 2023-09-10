@@ -3,15 +3,21 @@ import { IoIosArrowDown } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { AnimatePresence, motion } from "framer-motion";
+import { Formik } from "formik";
+import * as yup from "yup";
 
 type EmailProps = {
-  setCurrentStep?:any;
+  setCurrentStep?: any;
   dispatch?: any;
   verified?: boolean;
 };
 type Data = {
   name: string;
   prefixes: string;
+};
+type valuesType = {
+  pass: string | null;
+  mail: string | null;
 };
 const Email: React.FC<EmailProps> = ({
   setCurrentStep,
@@ -243,60 +249,113 @@ const Email: React.FC<EmailProps> = ({
     });
     setCurrentStep((step: number) => step + 1);
   };
+  const validationsSchema = yup.object().shape({
+    email: yup.string().email("Type correct Email").required("required Input"),
+    number: yup
+      .number()
+      .typeError("Type only number")
+      .required("required Input"),
+    code: yup.number().typeError("Type only number").required("required Input"),
+  });
   return (
     <>
       {!verified ? (
-        <div className="standart_form">
-          <label htmlFor="">
-            <p>Email address</p>
-            <input type="text" placeholder="Enter your email address" />
-          </label>
-          <label htmlFor="" className="phone_label">
-            <p>Phone Number</p>
-            <div className="phone_number">
-              <label
-                htmlFor=""
-                className="prefics"
-                onClick={() => setDropOpen((dropOpen) => !dropOpen)}
-              >
-                <p>{checkedPrefix}</p>
-                <IoIosArrowDown className={dropOpen ? "rotatedArrow" : ""} />
-                {dropOpen && (
-                  <AnimatePresence>
-                    <motion.ul
-                      initial={{
-                        y: "40px",
-                      }}
-                      animate={{
-                        y: 0,
-                      }}
-                      exit={{
-                        y: "40px",
-                      }}
-                      className="prefics_dropdown"
-                    >
-                      {countryPhoneData.map((a, i) => {
-                        return (
-                          <li key={i} onClick={checkCountry}>
-                            {a.prefixes}
-                          </li>
-                        );
-                      })}
-                    </motion.ul>
-                  </AnimatePresence>
+        <Formik
+          initialValues={{
+            email: "",
+            number: "",
+          }}
+          validateOnBlur
+          onSubmit={(values) => {
+            console.log(values);
+          }}
+          validationSchema={validationsSchema}
+        >
+          {({
+            values,
+            errors,
+            touched,
+            handleChange,
+            handleBlur,
+            isValid,
+            handleSubmit,
+            dirty,
+          }) => (
+            <div className="standart_form">
+              <label htmlFor="email" className="email_input">
+                <p>Email address</p>
+                <input
+                  type="text"
+                  name="email"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.email}
+                  placeholder="Enter your email address"
+                />
+                {touched.email && errors.email && (
+                  <p className="standart_error_text">{errors.email}</p>
                 )}
               </label>
-              <label htmlFor="" className="phone_input">
-                <input type="text" placeholder="Enter phone number" />
+              <label htmlFor="" className="phone_label">
+                <p>Phone Number</p>
+                <div className="phone_number">
+                  <label
+                    htmlFor=""
+                    className="prefics"
+                    onClick={() => setDropOpen((dropOpen) => !dropOpen)}
+                  >
+                    <p>{checkedPrefix}</p>
+                    <IoIosArrowDown
+                      className={dropOpen ? "rotatedArrow" : ""}
+                    />
+                    {dropOpen && (
+                      <AnimatePresence>
+                        <motion.ul
+                          initial={{
+                            y: "40px",
+                          }}
+                          animate={{
+                            y: 0,
+                          }}
+                          exit={{
+                            y: "40px",
+                          }}
+                          className="prefics_dropdown"
+                        >
+                          {countryPhoneData.map((a, i) => {
+                            return (
+                              <li key={i} onClick={checkCountry}>
+                                {a.prefixes}
+                              </li>
+                            );
+                          })}
+                        </motion.ul>
+                      </AnimatePresence>
+                    )}
+                  </label>
+                  <label htmlFor="number" className="phone_input">
+                    <input
+                      type={"number"}
+                      value={values.number}
+                      name="number"
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      placeholder="Enter phone number"
+                    />
+                    {touched.number && errors.number && (
+                      <p className="standart_error_text">{errors.number}</p>
+                    )}
+                  </label>
+                </div>
               </label>
+              <label htmlFor="">
+                <p>Referral Code (Optional)</p>
+                <input type="text" placeholder="Nigeria" />
+              </label>
+              <button onClick={checkVerified}>Next</button>
             </div>
-          </label>
-          <label htmlFor="">
-            <p>Referral Code (Optional)</p>
-            <input type="text" placeholder="Nigeria" />
-          </label>
-          <button onClick={checkVerified}>Next</button>
-        </div>
+          )}
+        </Formik>
       ) : (
         <>
           <div className="standart_title">
@@ -308,14 +367,48 @@ const Email: React.FC<EmailProps> = ({
               </Link>
             </p>
           </div>
-          <div className="standart_form">
-            <label htmlFor="">
-              <p>4-digit verification code</p>
-              <input type="text" placeholder="Enter verification code" />
-            </label>
-            <button className="standart_link">I didn’t receive a code</button>
-            <button onClick={falseVerified}>Submit</button>
-          </div>
+          <Formik
+            initialValues={{
+              code: "",
+            }}
+            validateOnBlur
+            onSubmit={(values) => {
+              console.log(values);
+            }}
+            validationSchema={validationsSchema}
+          >
+            {({
+              values,
+              errors,
+              touched,
+              handleChange,
+              handleBlur,
+              isValid,
+              handleSubmit,
+              dirty,
+            }) => (
+              <div className="standart_form">
+                <label htmlFor="code" className="email_input">
+                  <p>4-digit verification code</p>
+                  <input
+                    type="text"
+                    name="code"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={values.code}
+                    placeholder="Enter verification code"
+                  />
+                  {touched.code && errors.code && (
+                    <p className="standart_error_text">{errors.code}</p>
+                  )}
+                </label>
+                <button className="standart_link">
+                  I didn’t receive a code
+                </button>
+                <button onClick={falseVerified}>Submit</button>
+              </div>
+            )}
+          </Formik>
         </>
       )}
     </>

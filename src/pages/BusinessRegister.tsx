@@ -25,7 +25,7 @@ const BusinessRegister: React.FC = () => {
     <BusinessVerify setCurrentStep={setCurrentStep} />,
     <BusinessPIN setCurrentStep={setCurrentStep} />,
     <BusinessDocs setCurrentStep={setCurrentStep} />,
-    <BusinessCurrency />,
+    <BusinessCurrency setCurrentStep={setCurrentStep} />,
     <BusinessSuccess />,
   ];
   return (
@@ -64,6 +64,10 @@ const BusinessRegister: React.FC = () => {
           ) : currentStep == 5 ? (
             <div className="standart_title standart_title_country">
               <h2>Upload Business Documents</h2>
+            </div>
+          ) : currentStep == 6 ? (
+            <div className="standart_title">
+              <h2>Select Your Preferred Currency</h2>
             </div>
           ) : (
             ""

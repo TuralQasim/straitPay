@@ -111,7 +111,7 @@ const Header3: React.FC<HeaderType> = ({ dispatch }) => {
             <Link className="sign_in" to="/login">
               Sign In
             </Link>
-            <Link className="sign_up" to="/business-register">
+            <Link className="sign_up sign_up_business" to="/business-register">
               Sign Up
             </Link>
           </div>

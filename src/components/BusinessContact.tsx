@@ -2,6 +2,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import React, { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { Formik } from "formik";
+import * as yup from "yup";
 
 type Data = {
   name: string;
@@ -225,68 +227,136 @@ const BusinessContact: React.FC<BusinessContactProps> = ({
       setCheckedPrefix(text);
     }
   };
+  const validationsSchema = yup.object().shape({
+    email: yup.string().email("Type correct Email").required("required Input"),
+    number: yup
+      .number()
+      .typeError("Type only number")
+      .required("required Input"),
+    address: yup
+      .string()
+      .typeError("Type only number")
+      .required("required Input"),
+  });
   return (
     <>
-      <div className="standart_form">
-        <label htmlFor="" className="phone_label phone_label_busibess">
-          <p>Business Phone Number</p>
-          <div className="phone_number">
-            <label
-              htmlFor=""
-              className="prefics"
-              onClick={() => setDropOpen((dropOpen) => !dropOpen)}
-            >
-              <p>{checkedPrefix}</p>
-              <IoIosArrowDown className={dropOpen ? "rotatedArrow" : ""} />
-              {dropOpen && (
-                <AnimatePresence>
-                  <motion.ul
-                    initial={{
-                      y: "40px",
-                    }}
-                    animate={{
-                      y: 0,
-                    }}
-                    exit={{
-                      y: "40px",
-                    }}
-                    className="prefics_dropdown"
-                  >
-                    {countryPhoneData.map((a, i) => {
-                      return (
-                        <li key={i} onClick={checkCountry}>
-                          {a.prefixes}
-                        </li>
-                      );
-                    })}
-                  </motion.ul>
-                </AnimatePresence>
+      <Formik
+        initialValues={{
+          email: "",
+          number: "",
+          address: "",
+        }}
+        validateOnBlur
+        onSubmit={(values) => {
+          console.log(values);
+        }}
+        validationSchema={validationsSchema}
+      >
+        {({
+          values,
+          errors,
+          touched,
+          handleChange,
+          handleBlur,
+          isValid,
+          handleSubmit,
+          dirty,
+        }) => (
+          <div className="standart_form">
+            <label htmlFor="" className="phone_label phone_label_busibess">
+              <p>Business Phone Number</p>
+              <div className="phone_number">
+                <label
+                  htmlFor=""
+                  className="prefics"
+                  onClick={() => setDropOpen((dropOpen) => !dropOpen)}
+                >
+                  <p>{checkedPrefix}</p>
+                  <IoIosArrowDown className={dropOpen ? "rotatedArrow" : ""} />
+                  {dropOpen && (
+                    <AnimatePresence>
+                      <motion.ul
+                        initial={{
+                          y: "40px",
+                        }}
+                        animate={{
+                          y: 0,
+                        }}
+                        exit={{
+                          y: "40px",
+                        }}
+                        className="prefics_dropdown"
+                      >
+                        {countryPhoneData.map((a, i) => {
+                          return (
+                            <li key={i} onClick={checkCountry}>
+                              {a.prefixes}
+                            </li>
+                          );
+                        })}
+                      </motion.ul>
+                    </AnimatePresence>
+                  )}
+                </label>
+                <label htmlFor="number" className="phone_input">
+                  <input
+                    type="number"
+                    name="number"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={values.number}
+                    placeholder="Enter phone number"
+                  />
+                  {touched.number && errors.number && (
+                    <p className="standart_error_text">{errors.number}</p>
+                  )}
+                </label>
+              </div>
+            </label>
+            <label htmlFor="email" className="email_input">
+              <p>Email address</p>
+              <input
+                type="text"
+                name="email"
+                onChange={handleChange}
+                onBlur={handleBlur}
+                value={values.email}
+                placeholder="Enter your email address"
+              />
+              {touched.email && errors.email && (
+                <p className="standart_error_text">{errors.email}</p>
               )}
             </label>
-            <label htmlFor="" className="phone_input">
-              <input type="text" placeholder="Enter phone number" />
+            <label htmlFor="address" className="email_input">
+              <p>Business Address</p>
+              <input
+                type="text"
+                name="address"
+                onChange={handleChange}
+                onBlur={handleBlur}
+                value={values.address}
+                placeholder="Enter your business Address"
+              />
+              {touched.address && errors.address && (
+                <p className="standart_error_text">{errors.address}</p>
+              )}
             </label>
+            <p className="business_contact_p">
+              Please review our{" "}
+              <Link className="standart_link_business" to="">
+                Teams and Conditions Policy
+              </Link>
+            </p>
+            <button
+              className="business_next_btn"
+              style={{ backgroundColor: "#544e9e" }}
+              onClick={() => setCurrentStep((prevStep: number) => prevStep + 1)}
+            >
+              Next
+            </button>
           </div>
-        </label>
-        <label htmlFor="">
-          <p>Email address</p>
-          <input type="text" placeholder="Enter your email address" />
-        </label>
-        <label htmlFor="">
-          <p>Business Address</p>
-          <input type="text" placeholder="Enter your business Address" />
-        </label>
-        <p className="business_contact_p">
-          Please review our <Link className="standart_link_business" to="">Teams and Conditions Policy</Link>
-        </p>
-        <button
-          className="business_next_btn"
-          style={{ backgroundColor: "#544e9e" }}
-          onClick={() => setCurrentStep((prevStep: number) => prevStep + 1)}
-        >
-          Next
-        </button>
-      </div>
+        )}
+      </Formik>
     </>
   );
 };

@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import { IoIosArrowDown } from "react-icons/io";
 import { AnimatePresence, motion } from "framer-motion";
 import { Dispatch } from "redux";
+import { Formik } from "formik";
+import * as yup from "yup";
 
 type AppState = {
   verified: boolean;
@@ -13,12 +15,13 @@ type AppState = {
   kyc: boolean;
   transaction: boolean;
   isVerified: boolean;
-}; 
+};
 
 type VerificateProps = {
   isVerified: boolean;
   dispatch: Dispatch;
 };
+
 const Verificate: React.FC<VerificateProps> = ({ isVerified, dispatch }) => {
   const countryPhoneData = [
     { name: "Afghanistan", prefixes: "+93" },
@@ -232,7 +235,8 @@ const Verificate: React.FC<VerificateProps> = ({ isVerified, dispatch }) => {
       setCheckedPrefix(text);
     }
   };
-  const checkIsVerified = () => {
+  const checkIsVerified = (e) => {
+    e.preventDefault();
     dispatch({
       type: "ISVERIFIED",
       payload: !isVerified,
@@ -244,6 +248,13 @@ const Verificate: React.FC<VerificateProps> = ({ isVerified, dispatch }) => {
       payload: true,
     });
   };
+  const validationsSchema = yup.object().shape({
+    number: yup
+      .number()
+      .typeError("Type only number")
+      .required("required Input"),
+    num: yup.number().typeError("Type only number").required("required Input"),
+  });
   return (
     <>
       <div className="container">
@@ -265,66 +276,132 @@ const Verificate: React.FC<VerificateProps> = ({ isVerified, dispatch }) => {
             </div>
           )}
           {!isVerified ? (
-            <div className="standart_form">
-              <label htmlFor="" className="phone_label">
-                <p>Phone Number</p>
-                <div className="phone_number">
-                  <label
-                    htmlFor=""
-                    className="prefics"
-                    onClick={() => setDropOpen((dropOpen) => !dropOpen)}
-                  >
-                    <p>{checkedPrefix}</p>
-                    <IoIosArrowDown
-                      className={dropOpen ? "rotatedArrow" : ""}
+            <Formik
+              initialValues={{
+                number: "",
+              }}
+              validateOnBlur
+              onSubmit={(values) => {
+                console.log(values);
+              }}
+              validationSchema={validationsSchema}
+            >
+              {({
+                values,
+                errors,
+                touched,
+                handleChange,
+                handleBlur,
+                isValid,
+                handleSubmit,
+                dirty,
+              }) => (
+                <form className="standart_form">
+                  <label htmlFor="" className="phone_label">
+                    <p>Phone Number</p>
+                    <div className="phone_number">
+                      <label
+                        htmlFor=""
+                        className="prefics"
+                        onClick={() => setDropOpen((dropOpen) => !dropOpen)}
+                      >
+                        <p>{checkedPrefix}</p>
+                        <IoIosArrowDown
+                          className={dropOpen ? "rotatedArrow" : ""}
+                        />
+                        {dropOpen && (
+                          <AnimatePresence>
+                            <motion.ul
+                              initial={{
+                                y: "40px",
+                              }}
+                              animate={{
+                                y: 0,
+                              }}
+                              exit={{
+                                y: "40px",
+                              }}
+                              className="prefics_dropdown"
+                            >
+                              {countryPhoneData.map((a, i) => {
+                                return (
+                                  <li key={i} onClick={checkCountry}>
+                                    {a.prefixes}
+                                  </li>
+                                );
+                              })}
+                            </motion.ul>
+                          </AnimatePresence>
+                        )}
+                      </label>
+                      <label htmlFor="number" className="phone_input">
+                        <input
+                          type="number"
+                          name="number"
+                          onChange={handleChange}
+                          onBlur={handleBlur}
+                          value={values.number}
+                          placeholder="Enter phone number"
+                        />
+                        {touched.number && errors.number && (
+                          <p className="standart_error_text">{errors.number}</p>
+                        )}
+                      </label>
+                    </div>
+                  </label>
+                  <button onClick={checkIsVerified}>Next</button>
+                </form>
+              )}
+            </Formik>
+          ) : (
+            <Formik
+              initialValues={{
+                num: "",
+              }}
+              validateOnBlur
+              onSubmit={(values) => {
+                console.log(values);
+              }}
+              validationSchema={validationsSchema}
+            >
+              {({
+                values,
+                errors,
+                touched,
+                handleChange,
+                handleBlur,
+                isValid,
+                handleSubmit,
+                dirty,
+              }) => (
+                <form className="standart_form">
+                  <label htmlFor="num" className="email_input">
+                    <p>4-digit verification code</p>
+                    <input
+                      type="number"
+                      name="num"
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      value={values.num}
+                      placeholder="Enter verification code"
                     />
-                    {dropOpen && (
-                      <AnimatePresence>
-                        <motion.ul
-                          initial={{
-                            y: "40px",
-                          }}
-                          animate={{
-                            y: 0,
-                          }}
-                          exit={{
-                            y: "40px",
-                          }}
-                          className="prefics_dropdown"
-                        >
-                          {countryPhoneData.map((a, i) => {
-                            return (
-                              <li key={i} onClick={checkCountry}>
-                                {a.prefixes}
-                              </li>
-                            );
-                          })}
-                        </motion.ul>
-                      </AnimatePresence>
+                    {touched.num && errors.num && (
+                      <p className="standart_error_text">{errors.num}</p>
                     )}
                   </label>
-                  <label htmlFor="" className="phone_input">
-                    <input type="text" placeholder="Enter phone number" />
-                  </label>
-                </div>
-              </label>
-              <button onClick={checkIsVerified}>Next</button>
-            </div>
-          ) : (
-            <div className="standart_form">
-              <label htmlFor="">
-                <p>4-digit verification code</p>
-                <input type="text" placeholder="Enter verification code" />
-              </label>
-              <button className="standart_link">I didn’t receive a code</button>
-              <Link
-                to="/userAccount"
-                className="submit_btn"
-                onClick={checkPhoneVerified}
-              >
-                Submit
-              </Link>
-            </div>
+                  <button className="standart_link">
+                    I didn’t receive a code
+                  </button>
+                  <Link
+                    to="/userAccount"
+                    className="submit_btn"
+                    onClick={checkPhoneVerified}
+                  >
+                    Submit
+                  </Link>
+                </form>
+              )}
+            </Formik>
           )}
           {!isVerified ? (
             <Link className="standart_back" to="/userAccount">

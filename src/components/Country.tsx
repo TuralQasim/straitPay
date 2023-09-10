@@ -218,7 +218,7 @@ const Country: React.FC<CountryProps> = ({ setCurrentStep }) => {
   };
   return (
     <>
-      <div className="standart_form">
+      <form className="standart_form">
         <label htmlFor="">
           <p>What’s your primary country of residence?</p>
           <div
@@ -231,13 +231,13 @@ const Country: React.FC<CountryProps> = ({ setCurrentStep }) => {
               <AnimatePresence>
                 <motion.ul
                   initial={{
-                    y: "40px",
+                    y: "20px",
                   }}
                   animate={{
                     y: 0,
                   }}
                   exit={{
-                    y: "40px",
+                    y: "20px",
                   }}
                   className="country_dropdown"
                 >
@@ -258,7 +258,7 @@ const Country: React.FC<CountryProps> = ({ setCurrentStep }) => {
         >
           Next
         </button>
-      </div>
+      </form>
     </>
   );
 };
