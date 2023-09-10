@@ -48,6 +48,13 @@ const Header3: React.FC<HeaderType> = ({ dispatch }) => {
       payload: false,
     });
   };
+  const openComing = () => {
+    setBurgerOpen(false);
+    dispatch({
+      type: "COMING",
+      payload: true,
+    });
+  };
   return (
     <>
       <div className="container">
@@ -108,10 +115,14 @@ const Header3: React.FC<HeaderType> = ({ dispatch }) => {
             <NavLink to="/userAccount">Account</NavLink>
           </ul>
           <div className="sign_in_up">
-            <Link className="sign_in" to="/login">
+            <Link onClick={openComing} className="sign_in" to="#">
               Sign In
             </Link>
-            <Link className="sign_up sign_up_business" to="/business-register">
+            <Link
+              onClick={openComing}
+              className="sign_up sign_up_business"
+              to="#"
+            >
               Sign Up
             </Link>
           </div>
@@ -211,18 +222,10 @@ const Header3: React.FC<HeaderType> = ({ dispatch }) => {
                     </NavLink>
                   </ul>
                   <div className="sign_in_up">
-                    <Link
-                      className="sign_in"
-                      to="/login"
-                      onClick={() => setBurgerOpen(false)}
-                    >
+                    <Link className="sign_in" to="#" onClick={openComing}>
                       Sign In
                     </Link>
-                    <Link
-                      to="/business-register"
-                      className="sign_up"
-                      onClick={() => setBurgerOpen(false)}
-                    >
+                    <Link to="#" className="sign_up" onClick={openComing}>
                       Sign Up
                     </Link>
                   </div>

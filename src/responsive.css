@@ -338,6 +338,18 @@
     width: 70% !important;
     font-size: 16px;
   }
+  .coming {
+    position: absolute;
+    bottom: -25px;
+    max-width: 95%;
+    background-color: #3a3f45;
+    padding: 25px 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff !important;
+    z-index: 999;
+  }
 }
 @media screen and (max-width: 768px) {
   .navbar {
@@ -352,6 +364,7 @@
   }
   .burger_menu {
     order: 2;
+    z-index: 999999999 !important;
   }
   .sign_in_up {
     flex-direction: row-reverse;
@@ -1054,6 +1067,42 @@
   .flaqs_wrapper .previous_flag_btn,
   .flaqs_wrapper .next_flag_btn {
     display: none !important;
+  }
+  .coming {
+    padding: 20px 25px;
+  }
+  .coming_text {
+    width: 80%;
+    gap: 10px;
+  }
+  .coming_text h2 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .coming_text p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .coming_btns {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 10px;
+    padding-left: 0;
+  }
+  .coming_btns a {
+    width: 75px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .coming_btns button {
+    width: 75px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 17px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -1854,6 +1903,44 @@
     left: 50%;
     transform: translate(-50%, -50%);
     pointer-events: none;
+  }
+  .coming {
+    bottom: 0;
+    z-index: 99999 !important;
+    padding: 20px 10px;
+  }
+  .coming_text {
+    width: 75%;
+    gap: 5px;
+  }
+  .coming_text h2 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .coming_text p {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .coming_btns {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 10px;
+    padding-left: 0;
+  }
+  .coming_btns a {
+    width: 65px;
+    height: 35px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .coming_btns button {
+    width: 65px;
+    height: 35px;
+    font-size: 14px;
+    line-height: 17px;
   }
 }
 @media screen and (max-width: 320px) {

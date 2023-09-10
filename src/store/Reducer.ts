@@ -5,6 +5,7 @@ type AppState = {
   transaction: boolean;
   isVerified: boolean;
   business: boolean;
+  coming: boolean;
 };
 
 const initalState: AppState = {
@@ -14,6 +15,7 @@ const initalState: AppState = {
   transaction: false,
   isVerified: false,
   business: false,
+  coming: false,
 };
 export default function Reducer(state = initalState, action) {
   switch (action.type) {
@@ -21,6 +23,8 @@ export default function Reducer(state = initalState, action) {
       return { ...state, verified: action.payload };
     case "ISVERIFIED":
       return { ...state, isVerified: action.payload };
+    case "COMING":
+      return { ...state, coming: action.payload };
     case "BUSINESS":
       return { ...state, business: action.payload };
     case "VERIFIEDID":

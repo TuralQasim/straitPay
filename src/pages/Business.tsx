@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import ExpectItem from "../components/ExpectItem";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 
-function Business() {
+type BusinessType = {
+  dispatch: any;
+  coming: boolean;
+};
+const Business: React.FC<BusinessType> = ({ dispatch, coming }) => {
+  const closeComing = () => {
+    dispatch({
+      type: "COMING",
+      payload: false,
+    });
+  };
   return (
     <>
       <div className="business_hero_bg">
@@ -20,6 +31,25 @@ function Business() {
             <img src="./icons/countries.svg" alt="" />
           </div>
         </div>
+        {coming && (
+          <div className="container">
+            <div className="coming">
+              <div className="coming_text">
+                <h2>Coming Soon: A Game-changer for B2B</h2>
+                <p>
+                  Excited about what’s coming? We know and we share in your
+                  excitement. With just your email, you can sign up to show you
+                  are as excited as we are. Be the first to know when our B2B
+                  product launches! Sign up here! 🎉
+                </p>
+              </div>
+              <div className="coming_btns">
+                <Link to="">Sign Up</Link>
+                <button onClick={closeComing}>Close</button>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
       <div className="container">
         <div className="business_features">
@@ -157,6 +187,7 @@ function Business() {
       </div>
     </>
   );
-}
+};
 
-export default Business;
+const t = (a) => a;
+export default connect(t)(Business);
