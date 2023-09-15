@@ -1,0 +1,70 @@
+/* --------------EXPECT-------------- */
+
+.expect {
+  width: 100%;
+  margin: 80px 0 50px;
+}
+.expect_title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 15px;
+  margin-bottom: 35px;
+}
+.expect_title h2 {
+  font-family: "Alfa Slab One";
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: -0.015em;
+  text-align: center;
+  color: #0e0f0c;
+}
+.expect_title p {
+  font-family: "Neurial Grotesk";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: -0.015em;
+  text-align: center;
+  color: #0e0f0c;
+  max-width: 506px;
+}
+.expect_hero {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+}
+.expect_item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 15px;
+}
+.expect_item_img {
+  padding: 5px;
+  background-color: #fff2fb;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.expect_business_hero .expect_item_img {
+  background-color: #544e9e;
+}
+.expect_item_img img {
+  transform: scale(0.8);
+}
+.expect_item p {
+  max-width: 251px;
+  font-family: "Neurial Grotesk";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.015em;
+  text-align: left;
+  color: #0e0f0c;
+}

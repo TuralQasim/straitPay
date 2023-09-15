@@ -1,0 +1,74 @@
+/* ----------------BUSINESS FEATURES---------------- */
+
+.business_features {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 50px 0;
+}
+.business_features_title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+.business_features_title h2 {
+  font-family: "Alfa Slab One";
+  font-size: 46px;
+  font-weight: 400;
+  line-height: 56px;
+  letter-spacing: -0.015em;
+  text-align: center;
+  color: #0e0f0c;
+}
+.business_features_title p {
+  font-family: "Archivo";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: -0.005em;
+  text-align: center;
+  color: #0e0f0c;
+  max-width: 860px;
+}
+.business_features_hero {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.business_features_item {
+  width: 100%;
+  background-color: #fcba6a;
+  border-radius: 36px;
+  padding: 35px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 30px;
+  min-height: 324px;
+}
+.business_features_item h2 {
+  font-family: "Alfa Slab One";
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: -0.015em;
+  text-align: left;
+  color: #0e0f0c;
+}
+.business_features_item p {
+  font-family: "Archivo";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.005em;
+  text-align: left;
+  color: #0e0f0c;
+}

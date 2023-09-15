@@ -1,0 +1,155 @@
+/* ------------------------FAQS--------------- */
+.faqs_title {
+  margin: 30px 0;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fbfbfb;
+  gap: 25px;
+}
+.faqs_title h2 {
+  font-family: "Alfa Slab One";
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 72px;
+  letter-spacing: -0.015em;
+  text-align: center;
+  color: #0e0f0c;
+  max-width: 990px;
+}
+.faqs_title p {
+  font-family: "Neurial Grotesk";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: -0.015em;
+  text-align: center;
+  color: #0e0f0c;
+}
+.faqs_hero {
+  width: 100%;
+}
+.faqs_sect {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+}
+.faqs_sect_business h2 {
+  padding-left: 15px;
+}
+.faqs_sect h2 {
+  font-family: "Neurial Grotesk";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: -0.025em;
+  text-align: left;
+  color: #0e0f0c;
+}
+.faqs_items {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+}
+.faqs_item_hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.faqs_item {
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.4s;
+  padding: 5px 15px;
+  cursor: pointer;
+}
+.faqs_item:hover {
+  background-color: #f2f2f2;
+}
+.faqs_item p {
+  font-family: "Neurial Grotesk";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: -0.025em;
+  text-align: left;
+  color: #0e0f0c;
+  pointer-events: none;
+  width: 90%;
+}
+.faqs_item svg {
+  color: #d60c94;
+  font-size: 18px;
+  pointer-events: none;
+  width: 10%;
+}
+.faqs_modal h2 {
+  font-family: "Neurial Grotesk";
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: -0.025em;
+  text-align: left;
+  color: #0e0f0c;
+  margin-bottom: 20px;
+}
+.faqs_modal p {
+  font-family: "Neurial Grotesk";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: -0.025em;
+  text-align: left;
+  color: #595959;
+}
+.faqs_modal {
+  padding: 30px 40px;
+}
+.faqs_footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+  padding: 40px 0;
+  background-color: #fbfbfb;
+  gap: 25px;
+}
+.faqs_footer h2 {
+  font-family: "Alfa Slab One";
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 56px;
+  letter-spacing: -0.015em;
+  text-align: center;
+  color: #0e0f0c;
+}
+.faqs_footer a {
+  font-family: "Neurial Grotesk";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: -0.025em;
+  text-align: center;
+  color: #ffffff;
+  padding: 15px 24px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background-color: #d60c94;
+}

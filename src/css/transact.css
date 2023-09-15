@@ -1,0 +1,74 @@
+/* --------------------TRANSACT-------------------- */
+.transact {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 50px;
+}
+.transact_left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 73%;
+}
+.transact_left h2 {
+  font-family: "Alfa Slab One";
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 56px;
+  letter-spacing: -0.015em;
+  text-align: left;
+  color: #0e0f0c;
+  max-width: 550px;
+}
+.transact_left > p {
+  font-family: "Neurial Grotesk";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: -0.015em;
+  text-align: left;
+  color: #0e0f0c;
+  margin: 20px 0 40px;
+  max-width: 550px;
+}
+.transact_right {
+  width: 27%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.transact_items {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 85%;
+}
+.transact_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.transact_right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  align-items: flex-end;
+}
+.transact_right a {
+  display: inline-block;
+  padding: 19px 24px;
+  border-radius: 8px;
+  background-color: #de0b7f;
+  color: #ffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}

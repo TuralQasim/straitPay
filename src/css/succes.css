@@ -1,0 +1,62 @@
+.succes_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.succes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+.succes p {
+  font-family: "Aileron";
+  color: #29304d;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: center;
+  max-width: 246px;
+}
+.succes_download {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.succes_download h4 {
+  font-family: "Aileron";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: -0.10000000149011612px;
+  text-align: center;
+  color: #0c0d10;
+}
+.succes_download_links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  align-items: center;
+  margin-top: 20px;
+}
+.succes_download_links a {
+  display: inline-block;
+  background-color: #0e0f0c;
+  color: #ffffff;
+  width: 215px;
+  height: 60px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  align-items: center;
+  padding: 0 25px;
+}
+.succes_download_links a img {
+  transform: scale(2);
+}

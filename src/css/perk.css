@@ -1,0 +1,61 @@
+/* ----------------------PERK---------------- */
+
+.perk {
+  max-width: 853px;
+  margin: 30px auto 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.perk h2 {
+  font-family: "Alfa Slab One";
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: -0.015em;
+  text-align: center;
+  color: #0e0f0c;
+}
+.perk_items {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.perk_items h4:nth-of-type(1),
+.perk_items h4:nth-of-type(2),
+.perk_items h4:nth-of-type(3) {
+  width: 30%;
+  margin-bottom: 20px;
+}
+.perk_items h4:nth-of-type(3) {
+  text-align: right;
+  width: max-content;
+}
+.perk_items h4:nth-of-type(4) {
+  width: 30%;
+}
+.perk_items h4 {
+  font-family: "Neurial Grotesk";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.015em;
+  text-align: left;
+  color: #0e0f0c;
+  padding-left: 10px;
+  position: relative;
+}
+.perk_items h4::before {
+  position: absolute;
+  content: "";
+  top: 6px;
+  left: -11px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #de0b7f;
+}

@@ -1,0 +1,43 @@
+/* ----------------CAREER-------------------- */
+
+.career_hero {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 70px 0;
+  gap: 30px;
+}
+.career_hero h2 {
+  font-family: "Alfa Slab One";
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 80px;
+  letter-spacing: -0.015em;
+  text-align: center;
+  color: #0e0f0c;
+  max-width: 990px;
+}
+.career_hero p {
+  font-family: "Archivo";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: -0.005em;
+  text-align: center;
+  color: #0e0f0c;
+  max-width: 750px;
+}
+.career_hero button {
+  padding: 15px 24px;
+  border: none;
+  border-radius: 8px;
+  background-color: #de0b7f;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}

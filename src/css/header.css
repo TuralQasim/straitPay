@@ -1,0 +1,132 @@
+/* ---------------HEADER-------------- */
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+}
+.burger_menu {
+  display: none;
+}
+.burger_btn {
+  display: none;
+}
+.navbar {
+  margin-right: auto;
+  margin-left: 100px !important;
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  align-items: center;
+}
+.navbar a {
+  font-family: "Neurial Grotesk";
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: -0.025em;
+  text-align: left;
+  color: #0e0f0c;
+  transition: 0.4s;
+}
+.navbar a:hover {
+  color: #de0b7f !important;
+}
+.navbar a.active {
+  color: #de0b7f;
+}
+.navbar a.active_hash {
+  color: #de0b7f;
+}
+.navbar a.active_hash:hover {
+  color: #de0b7f !important;
+}
+.navbar a.not_active {
+  color: #0c0d10 !important;
+}
+.navbar a.not_active:hover {
+  color: #de0b7f !important;
+}
+.sign_in_up {
+  display: flex;
+  justify-content: flex-end;
+  gap: 25px;
+  align-items: center;
+}
+.sign_in {
+  font-family: "Neurial Grotesk";
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: -0.025em;
+  text-align: left;
+  color: #0e0f0c;
+  transition: 0.4s;
+}
+.sign_in:hover {
+  color: #de0b7f;
+}
+.sign_up {
+  font-family: "Neurial Grotesk";
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: -0.025em;
+  text-align: left;
+  color: #ffff;
+  display: inline-block;
+  padding: 7px 16px;
+  background-color: #de0b7f;
+  border-radius: 8px;
+}
+.sign_up_business {
+  background-color: #544e9e;
+}
+.chechedCompany {
+  position: relative;
+  cursor: pointer;
+}
+.company_dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100px;
+  height: 110px;
+  box-shadow: 0px 8px 36px 0px #00000014;
+  border-radius: 16px;
+  background-color: #ffffff;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  transition: 0.4s;
+  transform: translateY(40px);
+  visibility: hidden;
+  opacity: 0;
+  overflow: hidden;
+}
+.company_dropdown a {
+  display: inline-block;
+  padding: 5px 10px;
+  width: 100%;
+  border-bottom: 1px solid #ccccccc4;
+  transition: 0.4s;
+}
+.company_dropdown a:last-of-type {
+  border-bottom: none;
+}
+.company_dropdown a:hover {
+  color: #de0b7f;
+  background-color: #e4e1e16c;
+}
+.chechedCompany:hover .company_dropdown {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+.company_dropdown a.selected {
+  color: #de0b7f;
+}

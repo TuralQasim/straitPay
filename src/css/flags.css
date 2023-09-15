@@ -1,0 +1,64 @@
+/* --------------------FLAGS----------- */
+
+.flags {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 0;
+}
+.flag_item {
+  padding: 30px;
+  border-radius: 50%;
+  background-color: #f7f7f7;
+  width: 70px;
+  height: 70px;
+  position: relative;
+  cursor: pointer;
+}
+.flag_item_active {
+  border: 2px solid #544e9e;
+  background-color: #f8ebf4;
+}
+.flag_item_active_country {
+  border: 2px solid #544e9e;
+}
+.flag_item img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.flaqs_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.flags_country {
+  width: 70%;
+  margin: 50px auto;
+}
+.previous_flag_btn,
+.next_flag_btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #544e9e;
+  position: relative;
+  cursor: pointer;
+}
+.previous_flag_btn svg,
+.next_flag_btn svg {
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffffff;
+  pointer-events: none;
+}

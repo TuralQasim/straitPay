@@ -1,0 +1,68 @@
+/* -------------FEATURES--------------- */
+.features {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 17px;
+  margin-bottom: 40px;
+}
+.features_item_empty {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 25px;
+  padding: 0 50px 0;
+}
+.features_item_empty h2 {
+  font-family: "Alfa Slab One";
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 80px;
+  letter-spacing: -0.015em;
+  text-align: left;
+  color: #0e0f0c;
+  margin-top: 50px;
+}
+.features_item_empty p {
+  font-family: "Archivo";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: -0.005em;
+  text-align: left;
+  color: #0e0f0c;
+}
+.features_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 50px 50px 0;
+  background-color: #fff2fb;
+  border-radius: 36px;
+  width: 100%;
+}
+.features_item h2 {
+  font-family: "Alfa Slab One";
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 56px;
+  letter-spacing: -0.015em;
+  text-align: left;
+  color: #de0b7f;
+}
+.features_item p {
+  font-family: "Archivo";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.005em;
+  text-align: left;
+  color: #0e0f0c;
+  margin: 10px 0 20px;
+}
+.features_item img {
+  width: 100%;
+  margin-top: auto;
+}
