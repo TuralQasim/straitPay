@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useContext, SetStateAction } from "react";
 import Country from "../components/Country";
 import Email from "../components/Email";
 import Account from "../components/Account";
@@ -7,21 +7,14 @@ import PIN from "../components/PIN";
 import { Link } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 import { FaXmark } from "react-icons/fa6";
-import { connect } from "react-redux";
-import { Dispatch } from "redux";
+import {
+  VerifiedContext,
+  VerifiedContextType,
+} from "../context/VerifiedContext";
 
-type AppState = {
-  verified: boolean;
-  phone: boolean;
-  kyc: boolean;
-  transaction: boolean;
-  isVerified: boolean;
-};
-type RegisterProps = {
-  verified: boolean;
-  dispatch: Dispatch;
-};
-const Register: React.FC<RegisterProps> = ({ verified, dispatch }) => {
+const Register: React.FC = () => {
+  const { verified, setVerified } =
+    useContext<VerifiedContextType>(VerifiedContext);
   const [currentStep, setCurrentStep] = useState<number>(0);
   const steps = [
     <Country setCurrentStep={setCurrentStep} />,
@@ -30,10 +23,7 @@ const Register: React.FC<RegisterProps> = ({ verified, dispatch }) => {
     <PIN />,
   ];
   const checkVerified = () => {
-    dispatch({
-      type: "VERIFIED",
-      payload: !verified,
-    });
+    setVerified((verified) => !verified);
   };
   return (
     <>
@@ -116,5 +106,4 @@ const Register: React.FC<RegisterProps> = ({ verified, dispatch }) => {
   );
 };
 
-const t = (a: AppState) => a;
-export default connect(t)(Register);
+export default Register;

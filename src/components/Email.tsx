@@ -1,16 +1,19 @@
-import React, { useState, useRef } from "react";
+import React, {
+  useState,
+  useRef,
+  useContext,
+  SetStateAction,
+  Dispatch,
+} from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { Link } from "react-router-dom";
-import { connect } from "react-redux";
 import { AnimatePresence, motion } from "framer-motion";
 import { Formik } from "formik";
 import * as yup from "yup";
 import { useClickOutSide } from "../hooks/useClickOutSide";
-
+import { VerifiedContext } from "../context/VerifiedContext";
 type EmailProps = {
   setCurrentStep?: any;
-  dispatch?: any;
-  verified?: boolean;
 };
 type Data = {
   name: string;
@@ -20,11 +23,12 @@ type valuesType = {
   pass: string | null;
   mail: string | null;
 };
-const Email: React.FC<EmailProps> = ({
-  setCurrentStep,
-  dispatch,
-  verified,
-}) => {
+type VerifiedType = {
+  verified: boolean;
+  setVerified: Dispatch<SetStateAction<boolean>>;
+};
+const Email: React.FC<EmailProps> = ({ setCurrentStep }) => {
+  const { verified, setVerified } = useContext<VerifiedType>(VerifiedContext);
   const countryPhoneData: Data[] = [
     { name: "Afghanistan", prefixes: "+93" },
     { name: "Albania", prefixes: "+355" },
@@ -238,16 +242,10 @@ const Email: React.FC<EmailProps> = ({
     }
   };
   const checkVerified = () => {
-    dispatch({
-      type: "VERIFIED",
-      payload: !verified,
-    });
+    setVerified((verified: boolean) => !verified);
   };
   const falseVerified = () => {
-    dispatch({
-      type: "VERIFIED",
-      payload: !verified,
-    });
+    setVerified((verified: boolean) => !verified);
     setCurrentStep((step: number) => step + 1);
   };
   const validationsSchema = yup.object().shape({
@@ -421,5 +419,4 @@ const Email: React.FC<EmailProps> = ({
   );
 };
 
-const t = (a) => a;
-export default connect(t)(Email);
+export default Email;

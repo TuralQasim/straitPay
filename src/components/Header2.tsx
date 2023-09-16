@@ -1,17 +1,18 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AnimatePresence, motion } from "framer-motion";
 import { GrFormClose } from "react-icons/gr";
 import { NavHashLink } from "react-router-hash-link";
 import { useLocation } from "react-router-dom";
-import { connect } from "react-redux";
-import { Dispatch } from "react";
+import {
+  BusinessContext,
+  BusinessContextType,
+} from "../context/BusinessContext";
 
-type HeaderType = {
-  dispatch: any;
-};
-const Header2: React.FC<HeaderType> = ({ dispatch }) => {
+const Header2: React.FC = () => {
+  const { business, setBusiness } =
+    useContext<BusinessContextType>(BusinessContext);
   const { pathname } = useLocation();
   const { hash } = useLocation();
   const [burgerOpen, setBurgerOpen] = useState<boolean>(false);
@@ -38,16 +39,10 @@ const Header2: React.FC<HeaderType> = ({ dispatch }) => {
     enableScroll();
   }
   const changeBusinessTrue = () => {
-    dispatch({
-      type: "BUSINESS",
-      payload: true,
-    });
+    setBusiness(true);
   };
   const changeBusinessFalse = () => {
-    dispatch({
-      type: "BUSINESS",
-      payload: false,
-    });
+    setBusiness(false);
   };
   return (
     <>
@@ -257,5 +252,4 @@ const Header2: React.FC<HeaderType> = ({ dispatch }) => {
   );
 };
 
-const t = (a) => a;
-export default connect(t)(Header2);
+export default Header2;

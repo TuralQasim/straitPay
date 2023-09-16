@@ -1,29 +1,22 @@
-import React, { useState, useRef } from "react";
-import { connect } from "react-redux";
+import React, { useState, useRef, useContext } from "react";
 import { FaXmark } from "react-icons/fa6";
 import { IoIosArrowBack } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { IoIosArrowDown } from "react-icons/io";
 import { AnimatePresence, motion } from "framer-motion";
-import { Dispatch } from "redux";
 import { Formik } from "formik";
 import * as yup from "yup";
 import { useClickOutSide } from "../hooks/useClickOutSide";
+import { PhoneContext, PhoneContextType } from "../context/PhoneContext";
+import {
+  IsVerificateContext,
+  IsVerificateContextType,
+} from "../context/IsVerificateContext";
 
-type AppState = {
-  verified: boolean;
-  phone: boolean;
-  kyc: boolean;
-  transaction: boolean;
-  isVerified: boolean;
-};
-
-type VerificateProps = {
-  isVerified: boolean;
-  dispatch: Dispatch;
-};
-
-const Verificate: React.FC<VerificateProps> = ({ isVerified, dispatch }) => {
+const Verificate: React.FC = () => {
+  const { isVerified, setIsVerified } =
+    useContext<IsVerificateContextType>(IsVerificateContext);
+  const { phone, setPhone } = useContext<PhoneContextType>(PhoneContext);
   const countryPhoneData = [
     { name: "Afghanistan", prefixes: "+93" },
     { name: "Albania", prefixes: "+355" },
@@ -236,18 +229,12 @@ const Verificate: React.FC<VerificateProps> = ({ isVerified, dispatch }) => {
       setCheckedPrefix(text);
     }
   };
-  const checkIsVerified = (e) => {
+  const checkIsVerified = (e: React.MouseEvent) => {
     e.preventDefault();
-    dispatch({
-      type: "ISVERIFIED",
-      payload: !isVerified,
-    });
+    setIsVerified((isVerified) => !isVerified);
   };
   const checkPhoneVerified = () => {
-    dispatch({
-      type: "VERIFIEDPHONE",
-      payload: true,
-    });
+    setPhone((phone) => !phone);
   };
   const validationsSchema = yup.object().shape({
     number: yup
@@ -429,5 +416,4 @@ const Verificate: React.FC<VerificateProps> = ({ isVerified, dispatch }) => {
   );
 };
 
-const t = (a: AppState) => a;
-export default connect(t)(Verificate);
+export default Verificate;

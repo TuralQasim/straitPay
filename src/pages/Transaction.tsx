@@ -1,29 +1,19 @@
-import React, { useState } from "react";
-import { connect } from "react-redux";
+import React, { useContext, useState } from "react";
 import { FaXmark } from "react-icons/fa6";
 import { IoIosArrowBack } from "react-icons/io";
 import { Link } from "react-router-dom";
-import { Dispatch } from "redux";
 import { Formik } from "formik";
 import * as yup from "yup";
+import {
+  TransactionContext,
+  TransactionContextType,
+} from "../context/TransactionContext";
 
-type AppState = {
-  verified: boolean;
-  phone: boolean;
-  kyc: boolean;
-  transaction: boolean;
-  isVerified: boolean;
-};
-
-type TransactionProps = {
-  dispatch: Dispatch;
-};
-const Transaction: React.FC<TransactionProps> = ({ dispatch }) => {
-  const setTransaction = () => {
-    dispatch({
-      type: "TRANSACT",
-      payload: true,
-    });
+const Transaction: React.FC = () => {
+  const { transaction, setTransaction } =
+    useContext<TransactionContextType>(TransactionContext);
+  const changeTransaction = () => {
+    setTransaction((transaction) => !transaction);
   };
   const validationsSchema = yup.object().shape({
     pin: yup.number().typeError("Type only number").required("required Input"),
@@ -94,7 +84,7 @@ const Transaction: React.FC<TransactionProps> = ({ dispatch }) => {
                 <Link
                   to="/userAccount"
                   className="submit_btn"
-                  onClick={setTransaction}
+                  onClick={changeTransaction}
                 >
                   Set Tranaction PIN
                 </Link>
@@ -115,5 +105,4 @@ const Transaction: React.FC<TransactionProps> = ({ dispatch }) => {
   );
 };
 
-const t = (a: AppState) => a;
-export default connect(t)(Transaction);
+export default Transaction;

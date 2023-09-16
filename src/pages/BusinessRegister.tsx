@@ -1,6 +1,5 @@
 import React from "react";
 import { Dispatch } from "react";
-import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { IoIosArrowBack } from "react-icons/io";
@@ -14,7 +13,6 @@ import BusinessDocs from "../components/BusinessDocs";
 import BusinessCurrency from "../components/BusinessCurrency";
 import BusinessSuccess from "../components/BusinessSuccess";
 
-type BusinessRegisterType = {};
 
 const BusinessRegister: React.FC = () => {
   const [currentStep, setCurrentStep] = useState<number>(0);
@@ -101,5 +99,4 @@ const BusinessRegister: React.FC = () => {
   );
 };
 
-const t = (a) => a;
 export default BusinessRegister;

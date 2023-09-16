@@ -4,7 +4,6 @@ import { IoIosArrowBack } from "react-icons/io";
 import { FaXmark } from "react-icons/fa6";
 import { BsEyeSlash } from "react-icons/bs";
 import { BsEye } from "react-icons/bs";
-import { connect } from "react-redux";
 import { Formik } from "formik";
 import * as yup from "yup";
 
@@ -134,5 +133,4 @@ const Login: React.FC<LoginType> = ({ business }) => {
   );
 };
 
-const t = (a) => a;
-export default connect(t)(Login);
+export default Login;

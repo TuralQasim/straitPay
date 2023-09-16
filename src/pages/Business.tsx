@@ -1,18 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import ExpectItem from "../components/ExpectItem";
 import { Link } from "react-router-dom";
-import { connect } from "react-redux";
+import { ComingContext, ComingContextType } from "../context/ComingContext";
 
-type BusinessType = {
-  dispatch: any;
-  coming: boolean;
-};
-const Business: React.FC<BusinessType> = ({ dispatch, coming }) => {
+const Business: React.FC = () => {
+  const { coming, setComing } = useContext<ComingContextType>(ComingContext);
   const closeComing = () => {
-    dispatch({
-      type: "COMING",
-      payload: false,
-    });
+    setComing(false);
   };
   return (
     <>
@@ -189,5 +183,4 @@ const Business: React.FC<BusinessType> = ({ dispatch, coming }) => {
   );
 };
 
-const t = (a) => a;
-export default connect(t)(Business);
+export default Business;

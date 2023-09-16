@@ -1,24 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { connect } from "react-redux";
+import { KYCContext, KYCContextType } from "../context/KYCContext";
+import { PhoneContext, PhoneContextType } from "../context/PhoneContext";
+import {
+  TransactionContext,
+  TransactionContextType,
+} from "../context/TransactionContext";
 
-type AppState = {
-  verified: boolean;
-  phone: boolean;
-  kyc: boolean;
-  transaction: boolean;
-  isVerified: boolean;
-};
-type UserAccountProps = {
-  phone: boolean;
-  kyc: boolean;
-  transaction: boolean;
-};
-const UserAccount: React.FC<UserAccountProps> = ({
-  phone,
-  kyc,
-  transaction,
-}) => {
+const UserAccount: React.FC = () => {
+  const { phone, setPhone } = useContext<PhoneContextType>(PhoneContext);
+  const { kyc, setKyc } = useContext<KYCContextType>(KYCContext);
+  const { transaction, setTransaction } =
+    useContext<TransactionContextType>(TransactionContext);
   const isTrue = phone && kyc && transaction;
   return (
     <>
@@ -164,5 +157,4 @@ const UserAccount: React.FC<UserAccountProps> = ({
   );
 };
 
-const t = (a: AppState) => a;
-export default connect(t)(UserAccount);
+export default UserAccount;

@@ -1,26 +1,30 @@
 import { AnimatePresence, motion } from "framer-motion";
-import React, { useState, useRef } from "react";
+import React, {
+  useState,
+  useRef,
+  useContext,
+  SetStateAction,
+  Dispatch,
+} from "react";
 import { IoIosArrowBack } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { IoIosArrowDown } from "react-icons/io";
-import { connect } from "react-redux";
 import { FaXmark } from "react-icons/fa6";
-import { Dispatch } from "redux";
 import { useClickOutSide } from "../hooks/useClickOutSide";
+import { KYCContext, KYCContextType } from "../context/KYCContext";
 
 type AppState = {
-  verified: boolean;
   phone: boolean;
   kyc: boolean;
   transaction: boolean;
   isVerified: boolean;
 };
-
-type KYCProps = {
-  dispatch: Dispatch;
+type KycType = {
+  verified: boolean;
+  setVerified: Dispatch<SetStateAction<boolean>>;
 };
-
-const KYC: React.FC<KYCProps> = ({ dispatch }) => {
+const KYC: React.FC = () => {
+  const { kyc, setKyc } = useContext<KYCContextType>(KYCContext);
   const [dropOpen, setDropOpen] = useState<boolean>(false);
   const [checkedId, setCheckedId] = useState<string>("National ID Card");
   const checkID = (e: React.MouseEvent) => {
@@ -33,10 +37,7 @@ const KYC: React.FC<KYCProps> = ({ dispatch }) => {
     }
   };
   const checkIDVerified = () => {
-    dispatch({
-      type: "VERIFIEDID",
-      payload: true,
-    });
+    setKyc(true);
   };
   const [front, setFront] = useState(false);
   const [back, setBack] = useState(false);
@@ -149,5 +150,4 @@ const KYC: React.FC<KYCProps> = ({ dispatch }) => {
   );
 };
 
-const t = (a: AppState) => a;
-export default connect(t)(KYC);
+export default KYC;

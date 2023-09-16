@@ -1,16 +1,19 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AnimatePresence, motion } from "framer-motion";
 import { GrFormClose } from "react-icons/gr";
 import { NavHashLink } from "react-router-hash-link";
 import { useLocation } from "react-router-dom";
-import { connect } from "react-redux";
 import { Dispatch } from "react";
-type HeaderType = {
-  dispatch: any;
-};
-const Header: React.FC<HeaderType> = ({ dispatch }) => {
+import {
+  BusinessContext,
+  BusinessContextType,
+} from "../context/BusinessContext";
+
+const Header: React.FC = () => {
+  const { business, setBusiness } =
+    useContext<BusinessContextType>(BusinessContext);
   const [burgerOpen, setBurgerOpen] = useState<boolean>(false);
   const forCloseBurger = () => {
     const burger = document.querySelector(".burger");
@@ -39,16 +42,10 @@ const Header: React.FC<HeaderType> = ({ dispatch }) => {
   const { hash } = useLocation();
   const { pathname } = useLocation();
   const changeBusinessTrue = () => {
-    dispatch({
-      type: "BUSINESS",
-      payload: true,
-    });
+    setBusiness(true)
   };
   const changeBusinessFalse = () => {
-    dispatch({
-      type: "BUSINESS",
-      payload: false,
-    });
+    setBusiness(false)
   };
   return (
     <>
@@ -233,5 +230,4 @@ const Header: React.FC<HeaderType> = ({ dispatch }) => {
   );
 };
 
-const t = (a) => a;
-export default connect(t)(Header);
+export default Header;
