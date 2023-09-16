@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 import { FaXmark } from "react-icons/fa6";
@@ -6,19 +6,22 @@ import { BsEyeSlash } from "react-icons/bs";
 import { BsEye } from "react-icons/bs";
 import { Formik } from "formik";
 import * as yup from "yup";
-
+import {
+  BusinessContext,
+  BusinessContextType,
+} from "../context/BusinessContext";
 type valuesType = {
   pass: string | null;
   mail: string | null;
 };
-type LoginType = {
-  business: boolean;
-};
+
 type FormikProps = {
   email: string;
   pass: string;
 };
-const Login: React.FC<LoginType> = ({ business }) => {
+const Login: React.FC = () => {
+  const { business, setBusiness } =
+    useContext<BusinessContextType>(BusinessContext);
   const validationsSchema = yup.object().shape({
     email: yup.string().email("Type correct Email").required("required Input"),
     pass: yup.string().typeError("").required("required Input"),
@@ -28,6 +31,7 @@ const Login: React.FC<LoginType> = ({ business }) => {
   const checkPass = () => {
     setPass((pass) => !pass);
   };
+
   return (
     <>
       <div className="container">
