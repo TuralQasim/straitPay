@@ -1,0 +1,109 @@
+@media screen and (max-width: 320px) {
+  .features {
+    padding: 0 15px;
+  }
+  .people_hero {
+    padding: 0;
+  }
+  .awards_hero {
+    margin-bottom: 80px;
+  }
+  .mission_title h2 {
+    font-size: 32px;
+    line-height: 32px;
+  }
+  .career_hero h2 {
+    font-size: 24px;
+    line-height: 28px;
+    max-width: 100%;
+  }
+  .career_hero p {
+    font-size: 14px;
+    line-height: 16px;
+    max-width: 350px;
+  }
+  .who_text h2 {
+    font-size: 28px;
+    line-height: 30px;
+  }
+  .who_text p {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .who_text h4 {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .life p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .perk_items {
+    padding: 0 0 0 20px;
+  }
+  .perk h2 {
+    font-size: 28px;
+    line-height: 30px;
+  }
+  .blog_item h4 {
+    font-size: 14px;
+    line-height: 24px;
+    margin: 15px 0;
+  }
+  .blog_item h3 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+  .blog_hero {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+  .login {
+    margin-top: 20px;
+    padding-top: 30px;
+  }
+  .wallets {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+    height: max-content;
+    padding: 0;
+  }
+  .navbar a.not_active {
+    color: #0c0d10 !important;
+  }
+  .business_bg_img {
+    transform: scale(1.7) translateY(-20px);
+  }
+  .business_features_hero {
+    padding: 0;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+  }
+  .business_features_item {
+    padding: 25px 25px;
+    gap: 25px;
+    min-height: 254px;
+  }
+  .awards_business_hero {
+    margin-bottom: 0;
+  }
+  .foot1_icons a {
+    padding: 15px 0;
+    background-color: #0e0f0c;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2px;
+    font-size: 12px;
+    width: 100% !important;
+  }
+  .foot1_icons a img {
+    transform: scale(0.8);
+  }
+}
