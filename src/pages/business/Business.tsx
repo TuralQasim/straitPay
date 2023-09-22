@@ -3,10 +3,10 @@ import "../business/business.css";
 import React, { useContext, useState } from "react";
 import ExpectItem from "../../components/expectItem/ExpectItem";
 import { Link } from "react-router-dom";
-import { ComingContext, ComingContextType } from "../../context/ComingContext";
+import { AllContext, AllContextType } from "../../context/AllContext";
 
 const Business: React.FC = () => {
-  const { coming, setComing } = useContext<ComingContextType>(ComingContext);
+  const { coming, setComing } = useContext<AllContextType>(AllContext);
   const closeComing = () => {
     setComing(false);
   };

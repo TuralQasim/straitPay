@@ -6,14 +6,11 @@ import { IoIosArrowBack } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { Formik } from "formik";
 import * as yup from "yup";
-import {
-  TransactionContext,
-  TransactionContextType,
-} from "../../context/TransactionContext";
+import { AllContext, AllContextType } from "../../context/AllContext";
 
 const Transaction: React.FC = () => {
   const { transaction, setTransaction } =
-    useContext<TransactionContextType>(TransactionContext);
+    useContext<AllContextType>(AllContext);
   const changeTransaction = () => {
     setTransaction((transaction) => !transaction);
   };

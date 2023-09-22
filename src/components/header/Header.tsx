@@ -8,14 +8,10 @@ import { GrFormClose } from "react-icons/gr";
 import { NavHashLink } from "react-router-hash-link";
 import { useLocation } from "react-router-dom";
 import { Dispatch } from "react";
-import {
-  BusinessContext,
-  BusinessContextType,
-} from "../../context/BusinessContext";
+import { AllContext, AllContextType } from "../../context/AllContext";
 
 const Header: React.FC = () => {
-  const { business, setBusiness } =
-    useContext<BusinessContextType>(BusinessContext);
+  const { business, setBusiness } = useContext<AllContextType>(AllContext);
   const [burgerOpen, setBurgerOpen] = useState<boolean>(false);
   const forCloseBurger = () => {
     const burger = document.querySelector(".burger");

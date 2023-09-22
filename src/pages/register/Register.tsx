@@ -9,14 +9,10 @@ import PIN from "../../components/pin/PIN";
 import { Link } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 import { FaXmark } from "react-icons/fa6";
-import {
-  VerifiedContext,
-  VerifiedContextType,
-} from "../../context/VerifiedContext";
+import { AllContext, AllContextType } from "../../context/AllContext";
 
 const Register: React.FC = () => {
-  const { verified, setVerified } =
-    useContext<VerifiedContextType>(VerifiedContext);
+  const { verified, setVerified } = useContext<AllContextType>(AllContext);
   const [currentStep, setCurrentStep] = useState<number>(0);
   const steps = [
     <Country setCurrentStep={setCurrentStep} />,

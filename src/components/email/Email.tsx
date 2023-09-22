@@ -13,7 +13,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Formik } from "formik";
 import * as yup from "yup";
 import { useClickOutSide } from "../../hooks/useClickOutSide";
-import { VerifiedContext } from "../../context/VerifiedContext";
+import { AllContext, AllContextType } from "../../context/AllContext";
 type EmailProps = {
   setCurrentStep?: any;
 };
@@ -30,7 +30,7 @@ type VerifiedType = {
   setVerified: Dispatch<SetStateAction<boolean>>;
 };
 const Email: React.FC<EmailProps> = ({ setCurrentStep }) => {
-  const { verified, setVerified } = useContext<VerifiedType>(VerifiedContext);
+  const { verified, setVerified } = useContext<AllContextType>(AllContext);
   const countryPhoneData: Data[] = [
     { name: "Afghanistan", prefixes: "+93" },
     { name: "Albania", prefixes: "+355" },

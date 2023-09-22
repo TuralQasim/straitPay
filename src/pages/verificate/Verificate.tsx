@@ -9,16 +9,11 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Formik } from "formik";
 import * as yup from "yup";
 import { useClickOutSide } from "../../hooks/useClickOutSide";
-import { PhoneContext, PhoneContextType } from "../../context/PhoneContext";
-import {
-  IsVerificateContext,
-  IsVerificateContextType,
-} from "../../context/IsVerificateContext";
+import { AllContext, AllContextType } from "../../context/AllContext";
 
 const Verificate: React.FC = () => {
-  const { isVerified, setIsVerified } =
-    useContext<IsVerificateContextType>(IsVerificateContext);
-  const { phone, setPhone } = useContext<PhoneContextType>(PhoneContext);
+  const { isVerified, setIsVerified } = useContext<AllContextType>(AllContext);
+  const { phone, setPhone } = useContext<AllContextType>(AllContext);
   const countryPhoneData = [
     { name: "Afghanistan", prefixes: "+93" },
     { name: "Albania", prefixes: "+355" },

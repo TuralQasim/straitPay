@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 import { IoIosArrowDown } from "react-icons/io";
 import { FaXmark } from "react-icons/fa6";
 import { useClickOutSide } from "../../hooks/useClickOutSide";
-import { KYCContext, KYCContextType } from "../../context/KYCContext";
+import { AllContext, AllContextType } from "../../context/AllContext";
 
 type AppState = {
   phone: boolean;
@@ -26,7 +26,7 @@ type KycType = {
   setVerified: Dispatch<SetStateAction<boolean>>;
 };
 const KYC: React.FC = () => {
-  const { kyc, setKyc } = useContext<KYCContextType>(KYCContext);
+  const { kyc, setKyc } = useContext<AllContextType>(AllContext);
   const [dropOpen, setDropOpen] = useState<boolean>(false);
   const [checkedId, setCheckedId] = useState<string>("National ID Card");
   const checkID = (e: React.MouseEvent) => {

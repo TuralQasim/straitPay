@@ -8,10 +8,7 @@ import { BsEyeSlash } from "react-icons/bs";
 import { BsEye } from "react-icons/bs";
 import { Formik } from "formik";
 import * as yup from "yup";
-import {
-  BusinessContext,
-  BusinessContextType,
-} from "../../context/BusinessContext";
+import { AllContext, AllContextType } from "../../context/AllContext";
 type valuesType = {
   pass: string | null;
   mail: string | null;
@@ -22,8 +19,7 @@ type FormikProps = {
   pass: string;
 };
 const Login: React.FC = () => {
-  const { business, setBusiness } =
-    useContext<BusinessContextType>(BusinessContext);
+  const { business, setBusiness } = useContext<AllContextType>(AllContext);
   const validationsSchema = yup.object().shape({
     email: yup.string().email("Type correct Email").required("required Input"),
     pass: yup.string().typeError("").required("required Input"),

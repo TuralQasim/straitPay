@@ -2,18 +2,13 @@ import "../../responsive.css";
 import "../userAccount/userAccount.css";
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { KYCContext, KYCContextType } from "../../context/KYCContext";
-import { PhoneContext, PhoneContextType } from "../../context/PhoneContext";
-import {
-  TransactionContext,
-  TransactionContextType,
-} from "../../context/TransactionContext";
+import { AllContext, AllContextType } from "../../context/AllContext";
 
 const UserAccount: React.FC = () => {
-  const { phone, setPhone } = useContext<PhoneContextType>(PhoneContext);
-  const { kyc, setKyc } = useContext<KYCContextType>(KYCContext);
+  const { phone, setPhone } = useContext<AllContextType>(AllContext);
+  const { kyc, setKyc } = useContext<AllContextType>(AllContext);
   const { transaction, setTransaction } =
-    useContext<TransactionContextType>(TransactionContext);
+    useContext<AllContextType>(AllContext);
   const isTrue = phone && kyc && transaction;
   return (
     <>

@@ -7,14 +7,11 @@ import { AnimatePresence, motion } from "framer-motion";
 import { GrFormClose } from "react-icons/gr";
 import { NavHashLink } from "react-router-hash-link";
 import { useLocation } from "react-router-dom";
-import {
-  BusinessContext,
-  BusinessContextType,
-} from "../../context/BusinessContext";
+import { AllContext, AllContextType } from "../../context/AllContext";
 
 const Header2: React.FC = () => {
   const { business, setBusiness } =
-    useContext<BusinessContextType>(BusinessContext);
+    useContext<AllContextType>(AllContext);
   const { pathname } = useLocation();
   const { hash } = useLocation();
   const [burgerOpen, setBurgerOpen] = useState<boolean>(false);
