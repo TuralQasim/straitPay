@@ -1,0 +1,130 @@
+.blog_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 50px 0 20px;
+}
+.blog_title h2 {
+  font-family: "Neurial Grotesk";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: -0.025em;
+  text-align: left;
+  color: #0e0f0c;
+}
+.blog_title a {
+  border: none;
+  background-color: transparent;
+  font-family: "Neurial Grotesk";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.025em;
+  text-align: left;
+  color: #0e0f0c;
+  cursor: pointer;
+}
+.blog_title a svg {
+  margin-left: 5px;
+  color: #6f6f6f;
+  font-size: 14px;
+}
+.blog_hero {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  gap: 20px;
+}
+/* ---------------------SUBSCRIBE--------------- */
+
+.subscribe {
+  margin: 80px 0;
+  padding-top: 40px;
+  padding-left: 40px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  background-color: #fbfbfb;
+}
+.subscribe_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 59%;
+  gap: 20px;
+}
+.subscribe_text h2 {
+  font-family: "Alfa Slab One";
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 56px;
+  letter-spacing: -0.015em;
+  text-align: left;
+  color: #0e0f0c;
+}
+.subscribe_text p {
+  font-family: "Neurial Grotesk";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: -0.015em;
+  text-align: left;
+  color: #0e0f0c;
+}
+.subscribe_text form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 5px;
+  width: 60%;
+}
+.subscribe_text form input {
+  width: 100%;
+  height: 56px;
+  border-radius: 8px;
+  padding: 15px 24px;
+  background-color: #f4f4f4;
+  border: none;
+  outline: none;
+}
+.subscribe_text form input::placeholder {
+  font-family: "Neurial Grotesk";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: -0.025em;
+  text-align: left;
+  color: #0e0f0c;
+}
+.subscribe_text form button {
+  width: 100%;
+  height: 56px;
+  border: none;
+  outline: none;
+  background-color: #de0b7f;
+  color: #ffffff;
+  font-family: "Neurial Grotesk";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: -0.025em;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.subscribe_img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 43%;
+}
+.subscribe_img img {
+  width: 100%;
+  aspect-ratio: 1.2/1;
+}

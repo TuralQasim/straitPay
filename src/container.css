@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo:wght@400;500&display=swap");
+@font-face {
+  font-family: "CustomFont2Name";
+  src: local("CustomFont2Name"),
+    url("..src/fonts/NeurialGrotesk-Bold.otf") format("otf"),
+    url("..src/fonts/NeurialGrotesk-Medium.otf") format("otf"),
+    url("..src/fonts/NeurialGrotesk-Regular.otf") format("otf");
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+.container {
+  width: 1192px;
+  max-width: 95%;
+  margin: 0 auto;
+}
+.rotate {
+  transform: rotate(180deg) !important;
+}
+.dnone {
+  display: none;
+}

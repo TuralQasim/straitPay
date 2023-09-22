@@ -1,0 +1,164 @@
+.standart_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: 586px;
+  margin: 30px auto;
+}
+.standart_form label {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.standart_form label p {
+  font-family: "Neurial Grotesk";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: -0.025em;
+  text-align: left;
+  color: #0e0f0c;
+}
+.standart_form label input {
+  width: 100%;
+  padding: 15px 24px;
+  border-radius: 8px;
+  background-color: #f4f4f4;
+  border: none;
+  height: 56px;
+  outline: none;
+}
+.standart_form button {
+  display: inline-block;
+  margin: 20px 0 30px;
+  border: none;
+  outline: none;
+  background-color: #d60c94;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: "Neurial Grotesk";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: -0.025em;
+  text-align: center;
+  border-radius: 8px;
+  width: 100%;
+  padding: 15px 24px;
+}
+.standart_form > p {
+  margin: 0 auto 20px;
+  font-family: "Neurial Grotesk";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: -0.025em;
+  text-align: center;
+  color: #0e0f0c;
+}
+.standart_form > p a {
+  font-family: "Neurial Grotesk";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: -0.025em;
+  text-align: center;
+  color: #d60c94;
+  margin-left: 5px;
+  text-decoration: underline;
+}
+.standart_form > a {
+  font-family: "Neurial Grotesk";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: -0.025em;
+  text-align: center;
+  color: #d60c94;
+  text-decoration: underline;
+  margin: 0 auto;
+}
+.standart_form .standart_link {
+  margin-bottom: 10px !important;
+}
+.standart_form h5 {
+  font-family: "Neurial Grotesk";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: -0.025em;
+  text-align: center;
+  color: #0e0f0c;
+  width: 100%;
+  margin-bottom: 40px;
+}
+.standart_form_id .id_front_business,
+.standart_form_id .id_front_business_empty {
+  background-color: #eeedf5 !important;
+  width: 100% !important;
+  height: 182px !important;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='16' ry='16' stroke='%23544E9EFF' stroke-width='4' stroke-dasharray='6%2c 14' stroke-dashoffset='23' stroke-linecap='square'/%3e%3c/svg%3e");
+  border-radius: 16px;
+  position: relative !important;
+  cursor: pointer !important;
+  margin-bottom: 20px;
+}
+.standart_form_id .id_front_business_empty input,
+.standart_form_id .id_front_business input {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background-color: transparent !important;
+  opacity: 0 !important;
+  cursor: pointer !important;
+}
+.id_front_business_h4 {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+  height: 100% !important;
+  text-align: center !important;
+  font-family: "Neurial Grotesk" !important;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  line-height: 25px !important;
+  letter-spacing: 0px !important;
+  text-align: center !important;
+  color: #29304d !important;
+}
+.id_front_business_h4 span {
+  font-family: "Aileron" !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  line-height: 25px !important;
+  letter-spacing: 0px !important;
+  text-align: center !important;
+  color: #544e9e !important;
+}
+.id_front_business_h2 {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+  height: 100% !important;
+  font-family: "Neurial Grotesk" !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  line-height: 25px !important;
+  letter-spacing: 0px !important;
+  text-align: center !important;
+  color: #544e9e !important;
+}
+.business_next_btn {
+  background-color: #544e9e;
+}

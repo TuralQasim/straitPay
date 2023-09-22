@@ -1,0 +1,31 @@
+.faqs_item {
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.4s;
+  padding: 5px 15px;
+  cursor: pointer;
+}
+.faqs_item:hover {
+  background-color: #f2f2f2;
+}
+.faqs_item p {
+  font-family: "Neurial Grotesk";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: -0.025em;
+  text-align: left;
+  color: #0e0f0c;
+  pointer-events: none;
+  width: 90%;
+}
+.faqs_item svg {
+  color: #d60c94;
+  font-size: 18px;
+  pointer-events: none;
+  width: 10%;
+}

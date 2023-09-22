@@ -1,0 +1,93 @@
+.blog_modal_bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #0e0f0c5f;
+  cursor: pointer;
+  z-index: 9;
+}
+.blog_modal,
+.faqs_modal {
+  position: relative;
+  width: 788px;
+  height: 80vh;
+  background-color: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  cursor: default;
+  transition: 0.4s;
+}
+.faqs_modal {
+  height: max-content;
+}
+.blog_modal_hero,
+.faqs_modal_hero {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.modal_close_btn {
+  position: absolute;
+  top: -50px;
+  right: 0px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+  color: #0e0f0c;
+  padding: 7px;
+  cursor: pointer;
+}
+.blog_modal img {
+  width: 100%;
+  height: 270px;
+}
+.blog_modal_text {
+  padding: 30px 30px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 15px;
+}
+.blog_modal_text h4 {
+  font-family: "Neurial Grotesk";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: -0.025em;
+  text-align: left;
+  color: #595959;
+}
+.blog_modal_text h2 {
+  font-family: "Neurial Grotesk";
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: -0.025em;
+  text-align: left;
+  color: #0e0f0c;
+}
+.blog_modal_text p {
+  font-family: "Neurial Grotesk";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: -0.025em;
+  text-align: left;
+  color: #595959;
+  text-align: justify;
+}

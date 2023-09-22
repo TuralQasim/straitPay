@@ -1,0 +1,111 @@
+.faqs_question_bg {
+  background-image: url("./data/faqsBusiness/faqsBg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  height: 60vh;
+  margin-bottom: 40px;
+  position: relative;
+}
+.faqs_question_bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  background-color: #0c0d10;
+}
+.faqs_question {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  position: relative;
+  z-index: 5;
+}
+.faqs_question h2 {
+  font-family: "Alfa Slab One";
+  font-size: 72px;
+  font-weight: 500;
+  line-height: 72px;
+  letter-spacing: -0.015em;
+  text-align: center;
+  color: #ffffff;
+  max-width: 990px;
+}
+.faqs_hero {
+  width: 100%;
+}
+.faqs_sect {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+}
+.faqs_sect_business h2 {
+  padding-left: 15px;
+}
+.faqs_sect h2 {
+  font-family: "Neurial Grotesk";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: -0.025em;
+  text-align: left;
+  color: #0e0f0c;
+}
+.faqs_items {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+}
+.faqs_business_items .faqs_item svg {
+  color: #544e9e !important;
+}
+.faqs_footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+  padding: 40px 0;
+  background-color: #fbfbfb;
+  gap: 25px;
+}
+.faqs_footer h2 {
+  font-family: "Alfa Slab One";
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 56px;
+  letter-spacing: -0.015em;
+  text-align: center;
+  color: #0e0f0c;
+}
+.faqs_footer a {
+  font-family: "Neurial Grotesk";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: -0.025em;
+  text-align: center;
+  color: #ffffff;
+  padding: 15px 24px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background-color: #d60c94;
+}
+.faqs_business_footer a {
+  background-color: #544e9e !important;
+}

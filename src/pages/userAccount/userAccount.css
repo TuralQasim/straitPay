@@ -1,0 +1,280 @@
+.hey {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  align-items: center;
+  margin: 40px 0;
+}
+.hey p {
+  font-family: "Neurial Grotesk";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: -0.015em;
+  text-align: left;
+  color: #0e0f0c;
+}
+.wallets {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 20px;
+  height: 144px;
+}
+.wallet_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc((100% - 60px) / 4);
+  height: 100%;
+  padding: 0 25px;
+  border-radius: 24px;
+}
+.wallet_item1 {
+  background-color: #f3fffa;
+}
+.wallet_item2 {
+  background-color: #fffaea;
+}
+.wallet_item3 {
+  background-color: #f8f8f8;
+}
+.wallet_item4 {
+  background-color: #f0f0ff;
+}
+.wallet_img img {
+  border-radius: 50%;
+}
+.wallet_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 15px;
+}
+.wallet_text h3 {
+  font-family: "Neurial Grotesk";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: -0.015em;
+  text-align: left;
+  color: #0e0f0c;
+}
+.wallet_text h2 {
+  font-family: "Neurial Grotesk";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: -0.015em;
+  text-align: left;
+  color: #0e0f0c;
+}
+.standart_link {
+  font-family: "Neurial Grotesk" !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  line-height: 26px !important;
+  letter-spacing: -0.025em !important;
+  text-align: center !important;
+  color: #d60c94 !important;
+  margin-left: 5px !important;
+  text-decoration: underline !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: none !important;
+  height: 26px !important;
+  margin: 0 !important;
+}
+.standart_link_business {
+  font-family: "Neurial Grotesk" !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  line-height: 26px !important;
+  letter-spacing: -0.025em !important;
+  text-align: center !important;
+  color: #544e9e !important;
+  margin-left: 5px !important;
+  text-decoration: underline !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: none !important;
+  height: 26px !important;
+  margin: 0 !important;
+}
+.standart_title > p .standart_link {
+  margin-left: 7px !important;
+}
+.standart_form .standart_link {
+  margin-bottom: 10px !important;
+}
+.account_foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 50px;
+}
+.complete,
+.recent,
+.activites,
+.download {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 15px;
+}
+.complete {
+  width: 55%;
+}
+.complete a {
+  position: relative;
+  display: inline-block;
+  font-family: "Neurial Grotesk";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: -0.015em;
+  text-align: left;
+  color: #0c0d10;
+  padding-left: 40px;
+  transition: 0.4s;
+}
+.complete a:hover {
+  color: #d60c94;
+}
+.complete a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  border: 1px solid #d60c94;
+  width: 25px;
+  height: 25px;
+}
+.for_complete_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 5px;
+}
+.for_complete_text h3 {
+  font-family: "Neurial Grotesk";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.015em;
+  text-align: left;
+  color: #0e0f0c;
+}
+.for_complete_text p {
+  font-family: "Neurial Grotesk";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: -0.015em;
+  text-align: left;
+  color: #979797;
+}
+.for_complete_text p span {
+  display: inline-block;
+  font-size: 48px;
+  color: #979797;
+  transform: translateY(-2px);
+}
+.account_title {
+  font-family: "Neurial Grotesk";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: -0.005em;
+  text-align: left;
+  color: #0e0f0c;
+}
+.recent_true {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+.recent_true .activites {
+  width: 55%;
+}
+.recent_true .download {
+  width: 45%;
+}
+.recent {
+  gap: 25px;
+  width: 45%;
+}
+.complete,
+.recent,
+.activites,
+.download {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 15px;
+}
+.for_compelete_activities {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  width: 60%;
+}
+.for_complite_item {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+.for_complite_item h2 {
+  margin-left: auto;
+}
+.for_complite_img {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #e8faf2;
+  padding: 25px;
+}
+.for_complite_item:nth-of-type(2) .for_complite_img {
+  background-color: #fff2fb;
+}
+.download_links {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  align-items: center;
+}
+.download_links a {
+  display: inline-block;
+  padding: 19px 24px;
+  border-radius: 8px;
+  background-color: #0c0d10;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  transition: 0.4s;
+}
+.download_links a:hover {
+  color: #d60c94;
+}
