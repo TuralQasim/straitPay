@@ -25,3 +25,18 @@
   text-align: left;
   color: #0e0f0c;
 }
+
+@media screen and (max-width: 480px) {
+  .people_item {
+    width: 100%;
+  }
+  .people_item p {
+    width: 100%;
+  }
+  .people_info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+}

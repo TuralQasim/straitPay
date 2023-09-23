@@ -1,4 +1,3 @@
-import "../../responsive.css";
 import "../register/register.css";
 import React from "react";
 import { useState, useContext, SetStateAction } from "react";

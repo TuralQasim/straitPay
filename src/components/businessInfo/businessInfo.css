@@ -117,7 +117,7 @@
 .rotatedArrow {
   transform: translateY(-50%) rotate(180deg) !important;
 }
-.country_dropdown{
+.country_dropdown {
   position: absolute;
   top: 100%;
   overflow-y: auto;
@@ -142,9 +142,30 @@
   border-bottom: 1px solid #cccccc59;
   transition: 0.4s;
 }
-.country_dropdown li:hover{
+.country_dropdown li:hover {
   background-color: #f4f4f4;
 }
 .business_next_btn {
   background-color: #544e9e;
+}
+
+@media screen and (max-width: 768px) {
+  .standart_form {
+    max-width: 80%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .standart_form {
+    max-width: 95%;
+  }
+  .standart_form label {
+    gap: 5px;
+    margin-bottom: 15px;
+  }
+  .standart_form button {
+    margin: 10px 0 20px;
+  }
+  .standart_form > p {
+    margin: 0 auto 10px;
+  }
 }

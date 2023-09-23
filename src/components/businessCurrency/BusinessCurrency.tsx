@@ -1,4 +1,3 @@
-import "../../responsive.css";
 import "../businessCurrency/businessCurrency.css";
 import { useState } from "react";
 

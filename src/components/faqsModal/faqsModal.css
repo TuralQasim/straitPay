@@ -71,3 +71,31 @@
   padding: 7px;
   cursor: pointer;
 }
+
+@media screen and (max-width: 1024px) {
+  .faqs_modal {
+    width: 600px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .faqs_modal {
+    width: 80vw !important;
+    padding: 20px 30px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .faqs_modal {
+    width: 85vw !important;
+    padding: 10px 15px;
+  }
+  .faqs_modal h2 {
+    font-size: 22px;
+    line-height: 28px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .faqs_modal p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

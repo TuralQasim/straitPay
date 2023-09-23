@@ -1,5 +1,4 @@
 import "../pin/pin.css";
-import "../../responsive.css";
 import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 

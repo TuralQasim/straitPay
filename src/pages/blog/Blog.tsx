@@ -1,4 +1,3 @@
-import "../../responsive.css";
 import "../blog/blog.css";
 import React, { useState } from "react";
 import { FaArrowRight } from "react-icons/fa";

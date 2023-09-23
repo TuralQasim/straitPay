@@ -1,5 +1,4 @@
 import "../header/header.css";
-import "../../responsive.css";
 import React, { useContext, useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";

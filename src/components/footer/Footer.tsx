@@ -1,4 +1,3 @@
-import "../../responsive.css";
 import "../footer/footer.css";
 import React from "react";
 import { NavLink, Link } from "react-router-dom";

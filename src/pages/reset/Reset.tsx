@@ -1,4 +1,3 @@
-import "../../responsive.css";
 import "../reset/reset.css";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";

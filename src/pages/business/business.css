@@ -453,3 +453,429 @@
   align-items: center;
   gap: 10px;
 }
+
+@media screen and (max-width: 1024px) {
+  .business_hero h2 {
+    font-size: 36px;
+    line-height: 40px;
+    max-width: 670px;
+  }
+  .business_hero p {
+    font-size: 20px;
+    line-height: 32px;
+    max-width: 660px;
+    margin: 15px 0 30px;
+  }
+  .awards_business_hero {
+    margin-bottom: 0;
+  }
+  .coming {
+    position: absolute;
+    bottom: -25px;
+    max-width: 95%;
+    background-color: #3a3f45;
+    padding: 25px 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff !important;
+    z-index: 999;
+  }
+  .business_features_title {
+    margin-bottom: 20px;
+    gap: 10px;
+  }
+  .business_features_title h2 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .business_features_title p {
+    font-size: 20px;
+    line-height: 32px;
+    max-width: 740px;
+  }
+  .business_features_item {
+    padding: 35px 25px;
+    gap: 25px;
+    min-height: 294px;
+  }
+  .business_features_item h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .business_features_item p {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .business_features_hero {
+    gap: 10px;
+  }
+  .expect_title p {
+    font-size: 18px;
+    line-height: 20px;
+    max-width: 350px;
+  }
+  .expect_title h2 {
+    line-height: 32px;
+  }
+  .awards {
+    margin-bottom: 0;
+  }
+  .awards_hero {
+    margin-bottom: 200px;
+  }
+  .business_transact_text h2 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .business_transact_text p {
+    font-size: 18px;
+    line-height: 22px;
+    max-width: 500px;
+  }
+  .business_transact_btns {
+    width: 200px;
+  }
+  .business_transact_btns a {
+    font-size: 14px;
+    height: 48px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .business_hero h2 {
+    font-size: 28px;
+    line-height: 32px;
+    max-width: 470px;
+  }
+  .business_hero p {
+    font-size: 18px;
+    line-height: 20px;
+    max-width: 470px;
+    margin: 15px 0 30px;
+  }
+  .business_hero_bg {
+    height: 70vh;
+  }
+  .business_hero {
+    height: 70vh;
+    padding: 40px 0;
+  }
+  .awards_business_hero {
+    margin-bottom: 0;
+  }
+  .coming {
+    padding: 20px 25px;
+  }
+  .coming_text {
+    width: 80%;
+    gap: 10px;
+  }
+  .coming_text h2 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .coming_text p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .coming_btns {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 10px;
+    padding-left: 0;
+  }
+  .coming_btns a {
+    width: 75px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .coming_btns button {
+    width: 75px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .business_features_title {
+    margin-bottom: 20px;
+    gap: 5px;
+  }
+  .business_features_title h2 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .business_features_title p {
+    font-size: 16px;
+    line-height: 20px;
+    max-width: 540px;
+  }
+  .business_features_item {
+    padding: 35px 25px;
+    gap: 25px;
+    min-height: 294px;
+  }
+  .business_features_item h2 {
+    font-size: 28px;
+    line-height: 32px;
+  }
+  .business_features_item p {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .business_features_hero {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  .expect_hero {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  .business_transact_text h2 {
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;
+    width: 100%;
+  }
+  .business_transact_text p {
+    font-size: 18px;
+    line-height: 22px;
+    max-width: 500px;
+    text-align: center;
+  }
+  .business_transact_top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .business_transact_btns {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: row;
+  }
+  .business_transact_btns a {
+    width: 200px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .business_hero h2 {
+    font-size: 20px;
+    line-height: 24px;
+    max-width: 470px;
+    font-weight: 500;
+  }
+  .business_hero p {
+    font-size: 16px;
+    line-height: 20px;
+    max-width: 470px;
+    margin: 10px 0 20px;
+  }
+  .business_hero_bg {
+    overflow: hidden;
+  }
+  .awards_business_hero {
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+  .awards_business_hero .awards_right {
+    width: 100%;
+  }
+  .awards_business_hero .awards_left {
+    width: 100%;
+  }
+  .coming {
+    bottom: 0;
+    z-index: 99999 !important;
+    padding: 20px 10px;
+  }
+  .coming_text {
+    width: 75%;
+    gap: 5px;
+  }
+  .coming_text h2 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .coming_text p {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .coming_btns {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 10px;
+    padding-left: 0;
+  }
+  .coming_btns a {
+    width: 65px;
+    height: 35px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .coming_btns button {
+    width: 65px;
+    height: 35px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .business_features_title {
+    margin-bottom: 20px;
+    gap: 10px;
+  }
+  .business_features_title h2 {
+    font-size: 28px;
+    line-height: 32px;
+  }
+  .business_features_title p {
+    font-size: 16px;
+    line-height: 20px;
+    max-width: 540px;
+  }
+  .business_features_item {
+    padding: 35px 25px;
+    gap: 25px;
+    min-height: 294px;
+  }
+  .business_features_item h2 {
+    font-size: 28px;
+    line-height: 32px;
+  }
+  .business_features_item p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .business_features_hero {
+    padding: 0 25px;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+  }
+  .business_features {
+    margin: 30px 0;
+  }
+  .expect_hero {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+  .expect_item {
+    width: 100%;
+  }
+  .expect_item p {
+    max-width: 100%;
+  }
+  .expect_title h2 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .expect_title p {
+    font-size: 18px;
+    line-height: 20px;
+    max-width: 280px;
+  }
+  .expect {
+    margin: 40px 0 20px;
+  }
+  .awards_hero {
+    margin-bottom: 100px;
+  }
+  .awards_hero p {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .awards_title {
+    margin-bottom: 20px;
+  }
+  .awards_title h2 {
+    font-size: 24px;
+    line-height: 25px;
+  }
+  .awards_title p {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .business_transact_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+  .business_transact_text h2 {
+    font-size: 24px;
+    line-height: 40px;
+    text-align: center;
+    width: 100%;
+  }
+  .business_transact_text p {
+    font-size: 18px;
+    line-height: 22px;
+    max-width: 500px;
+    text-align: center;
+  }
+  .business_transact_top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .business_transact_btns {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+  }
+  .business_transact_btns a {
+    width: 230px;
+    height: 50px;
+  }
+  .business_transact_item img {
+    transform: scale(0.8);
+  }
+  .business_transact_item p {
+    font-size: 12px;
+  }
+  .business_transact_bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .business_transact {
+    margin: 30px 0;
+  }
+}
+@media screen and (max-width: 320px) {
+  .awards_business_hero {
+    margin-bottom: 0;
+  }
+  .business_features_hero {
+    padding: 0;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+  }
+  .business_features_item {
+    padding: 25px 25px;
+    gap: 25px;
+    min-height: 254px;
+  }
+  .awards_hero {
+    margin-bottom: 80px;
+  }
+}

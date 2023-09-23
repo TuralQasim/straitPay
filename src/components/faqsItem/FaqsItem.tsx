@@ -1,4 +1,3 @@
-import "../../responsive.css";
 import "../faqsItem/faqsItem.css";
 import React from "react";
 import { FaPlus } from "react-icons/fa";

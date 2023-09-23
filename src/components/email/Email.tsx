@@ -1,4 +1,3 @@
-import "../../responsive.css";
 import "../email/email.css";
 import React, {
   useState,

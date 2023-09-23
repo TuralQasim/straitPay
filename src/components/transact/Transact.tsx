@@ -1,4 +1,3 @@
-import "../../responsive.css";
 import "../transact/transact.css";
 import React from "react";
 import { Link } from "react-router-dom";

@@ -1,4 +1,3 @@
-import "../../responsive.css";
 import "../businessVerify/businessVerify.css";
 import React from "react";
 import { Formik } from "formik";

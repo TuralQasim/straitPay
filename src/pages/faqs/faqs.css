@@ -153,3 +153,91 @@
   outline: none;
   background-color: #d60c94;
 }
+
+@media screen and (max-width: 1024px) {
+  .faqs_title,
+  .faqs_footer {
+    margin: 20px 0;
+    padding: 30px 0;
+    gap: 15px;
+  }
+  .faqs_title h2,
+  .faqs_footer h2 {
+    font-size: 48px;
+    line-height: 50px;
+    max-width: 650px;
+  }
+  .faqs_title p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .blog_modal,
+  .faqs_modal {
+    width: 600px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .faqs_title,
+  .faqs_footer {
+    margin: 20px 0;
+    padding: 15px 0;
+    gap: 10px;
+  }
+  .faqs_title h2,
+  .faqs_footer h2 {
+    font-size: 36px;
+    line-height: 40px;
+    max-width: 450px;
+  }
+  .faqs_title p {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .blog_modal,
+  .faqs_modal {
+    width: 80vw !important;
+    padding: 20px 30px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .faqs_title,
+  .faqs_footer {
+    margin: 20px 0;
+    padding: 10px 0;
+    gap: 10px;
+  }
+  .faqs_title h2,
+  .faqs_footer h2 {
+    font-size: 24px;
+    line-height: 25px;
+    max-width: 350px;
+  }
+  .faqs_footer h2 {
+    margin-bottom: 20px;
+  }
+  .faqs_title p {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+  }
+  .blog_modal,
+  .faqs_modal {
+    width: 85vw !important;
+    padding: 10px 15px;
+  }
+  .faqs_modal h2 {
+    font-size: 22px;
+    line-height: 28px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .faqs_footer a {
+    padding: 10px 20px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .faqs_modal p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

@@ -72,3 +72,83 @@
   width: 83%;
   aspect-ratio: 1.85/1;
 }
+
+@media screen and (max-width: 768px) {
+  .history_title {
+    margin: 30px 0;
+  }
+  .history_title h2 {
+    font-size: 48px;
+    line-height: 50px;
+  }
+  .history_text p {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .history_text p img {
+    margin: 15px 15px 0px 0;
+  }
+  .mission_title {
+    margin: 40px 0;
+    gap: 15px;
+  }
+  .mission_title h2 {
+    font-size: 44px;
+    line-height: 55px;
+  }
+  .mission_title p {
+    font-size: 20px;
+    line-height: 24px;
+    max-width: 500px;
+  }
+  .mission_img {
+    margin-bottom: 20px;
+  }
+  .mission_img img {
+    width: 83%;
+    aspect-ratio: 1.85/1;
+  }
+}
+@media screen and (max-width: 480px) {
+  .history_text p {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .history_text p img {
+    width: 100%;
+    margin: 0 0 20px;
+  }
+  .history_title {
+    margin: 30px 0;
+  }
+  .history_title h2 {
+    font-size: 48px;
+    line-height: 50px;
+  }
+  .mission_title {
+    margin: 30px 0;
+    gap: 25px;
+  }
+  .mission_title h2 {
+    font-size: 40px;
+    line-height: 44px;
+  }
+  .mission_title p {
+    font-size: 18px;
+    line-height: 20px;
+    max-width: 100%;
+  }
+  .mission_img {
+    margin-bottom: 20px;
+  }
+  .mission_img img {
+    width: 100%;
+    aspect-ratio: 1.85/1;
+  }
+}
+@media screen and (max-width: 320px) {
+  .mission_title h2 {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}

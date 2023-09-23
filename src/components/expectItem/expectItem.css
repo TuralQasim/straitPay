@@ -28,3 +28,12 @@
   text-align: left;
   color: #0e0f0c;
 }
+
+@media screen and (max-width: 480px) {
+  .expect_item {
+    width: 100%;
+  }
+  .expect_item p {
+    max-width: 100%;
+  }
+}

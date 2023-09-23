@@ -359,3 +359,241 @@
 .awards_business_hero .awards_left {
   width: 49%;
 }
+
+@media screen and (max-width: 1024px) {
+  .home_hero h1 {
+    font-size: 44px;
+    line-height: 50px;
+  }
+  .home_hero p {
+    font-size: 18px;
+    line-height: 24px;
+    margin: 10px 0 15px;
+  }
+  .home_hero {
+    margin: 30px 0;
+  }
+  .home_hero .home_hero_btns a {
+    padding: 15px 20px;
+    font-size: 16px;
+  }
+  .features_item {
+    padding: 30px 30px 0;
+  }
+  .features_item_empty h2 {
+    font-size: 48px;
+    line-height: 50px;
+    margin-top: 30px;
+    max-width: 90%;
+  }
+  .features_item_empty p {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .features_item h2 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .features_item p {
+    font-size: 16px;
+    line-height: 18px;
+    margin: 10px 0;
+  }
+  .expect_title p {
+    font-size: 18px;
+    line-height: 20px;
+    max-width: 350px;
+  }
+  .expect_title h2 {
+    line-height: 32px;
+  }
+  .people_title {
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .people_title h2 {
+    font-size: 28px;
+    line-height: 30px;
+  }
+  .people_title p {
+    font-size: 20px;
+    line-height: 22px;
+    max-width: 500px;
+  }
+  .people_hero {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 0 80px;
+  }
+  .awards {
+    margin-bottom: 0;
+  }
+  .awards_hero {
+    margin-bottom: 200px;
+  }
+  .awards_business_hero {
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .home_hero h1 {
+    font-size: 32px;
+    line-height: 35px;
+  }
+  .home_hero p {
+    font-size: 16px;
+    line-height: 20px;
+    margin: 10px 0 15px;
+    max-width: 480px;
+  }
+  .home_hero {
+    margin: 20px 0;
+  }
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 17px;
+    margin-bottom: 20px;
+  }
+  .features_item {
+    padding: 20px 20px 0;
+    overflow: hidden;
+  }
+  .expect_hero {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  .people_title h2 {
+    font-size: 24px;
+    line-height: 25px;
+  }
+  .people_title p {
+    font-size: 18px;
+    line-height: 20px;
+    max-width: 400px;
+  }
+  .people_hero {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 0 20px;
+  }
+  .awards_business_hero {
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .home_hero h1 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .home_hero p {
+    font-size: 16px;
+    line-height: 18px;
+    margin: 10px 0 20px;
+    max-width: 300px;
+  }
+  .home_hero .home_hero_btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .map_img {
+    margin: 15px 0;
+  }
+  .features {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 17px;
+    margin-bottom: 20px;
+    padding: 0 30px;
+  }
+  .features_item {
+    padding: 20px 20px 0;
+    overflow: hidden;
+  }
+  .features_item_empty {
+    height: 350px;
+  }
+  .expect_hero {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+  .expect_item {
+    width: 100%;
+  }
+  .expect_item p {
+    max-width: 100%;
+  }
+  .expect_title h2 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .expect_title p {
+    font-size: 18px;
+    line-height: 20px;
+    max-width: 280px;
+  }
+  .expect {
+    margin: 40px 0 20px;
+  }
+  .people_title h2 {
+    margin-top: 20px;
+    font-size: 24px;
+    line-height: 25px;
+  }
+  .people_title p {
+    font-size: 16px;
+    line-height: 20px;
+    max-width: 400px;
+  }
+  .people_hero {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    padding: 0 20px;
+  }
+  .people_item {
+    width: 100%;
+  }
+  .people_item p {
+    width: 100%;
+  }
+  .people_info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+  .awards_hero {
+    margin-bottom: 100px;
+  }
+  .awards_hero p {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .awards_title {
+    margin-bottom: 20px;
+  }
+  .awards_title h2 {
+    font-size: 24px;
+    line-height: 25px;
+  }
+  .awards_title p {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .features {
+    padding: 0 15px;
+  }
+  .people_hero {
+    padding: 0;
+  }
+  .awards_hero {
+    margin-bottom: 80px;
+  }
+  .awards_business_hero {
+    margin-bottom: 0;
+  }
+}

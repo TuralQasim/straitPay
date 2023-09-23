@@ -1,4 +1,3 @@
-import "../../responsive.css";
 import "../company/company.css";
 import React from "react";
 import Transact from "../../components/transact/Transact";

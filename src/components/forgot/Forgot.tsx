@@ -1,4 +1,3 @@
-import "../../responsive.css";
 import "../forgot/forgot.css";
 import React from "react";
 

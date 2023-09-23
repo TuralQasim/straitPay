@@ -1,4 +1,3 @@
-import "../../responsive.css";
 import "../expectItem/expectItem.css";
 import React from "react";
 

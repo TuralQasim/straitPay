@@ -1,4 +1,3 @@
-import "../../responsive.css";
 import "../blogItem/blogItem.css";
 import React from "react";
 import { FiArrowUpRight } from "react-icons/fi";

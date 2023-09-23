@@ -1,4 +1,3 @@
-import "../../responsive.css";
 import "../faqs/faqs.css";
 import React from "react";
 import FaqsItem from "../../components/faqsItem/FaqsItem";

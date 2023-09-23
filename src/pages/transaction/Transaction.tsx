@@ -1,4 +1,3 @@
-import "../../responsive.css";
 import "../transaction/transaction.css";
 import React, { useContext, useState } from "react";
 import { FaXmark } from "react-icons/fa6";

@@ -140,3 +140,51 @@
 .business_next_btn {
   background-color: #544e9e;
 }
+
+@media screen and (max-width: 768px) {
+  .standart_form {
+    max-width: 80%;
+  }
+  .flags_country {
+    width: 100%;
+    margin: 50px auto 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .standart_form {
+    max-width: 95%;
+  }
+  .standart_form label {
+    gap: 5px;
+    margin-bottom: 15px;
+  }
+  .standart_form button {
+    margin: 10px 0 20px;
+  }
+  .standart_form > p {
+    margin: 0 auto 10px;
+  }
+  .flags_country {
+    width: 100%;
+    margin: 30px auto 20px;
+  }
+  .flag_item {
+    padding: 25px;
+    border-radius: 50%;
+    background-color: #f7f7f7;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+  }
+  .flag_item img {
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+}

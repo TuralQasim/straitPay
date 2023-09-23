@@ -1,4 +1,3 @@
-import "../../responsive.css";
 import "../featuresItem/featuresItem.css";
 import React from "react";
 

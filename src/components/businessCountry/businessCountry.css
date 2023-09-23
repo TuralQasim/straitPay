@@ -183,3 +183,116 @@
 .business_next_btn {
   background-color: #544e9e;
 }
+
+@media screen and (max-width: 768px) {
+  .standart_form {
+    max-width: 80%;
+  }
+  .flaqs_wrapper .previous_flag_btn,
+  .flaqs_wrapper .next_flag_btn {
+    display: none !important;
+  }
+  .previous_flag_btn,
+  .next_flag_btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #544e9e;
+    position: relative;
+    cursor: pointer;
+  }
+  .previous_flag_btn svg,
+  .next_flag_btn svg {
+    font-size: 36px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffffff;
+    pointer-events: none;
+  }
+  .flaqs_wrapper .previous_flag_btn,
+  .flaqs_wrapper .next_flag_btn {
+    display: none !important;
+  }
+  .flags_country {
+    width: 100%;
+    margin: 50px auto 20px;
+  }
+  .flaqs_768 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 480px){
+  .standart_form {
+    max-width: 95%;
+  }
+  .standart_form label {
+    gap: 5px;
+    margin-bottom: 15px;
+  }
+  .standart_form button {
+    margin: 10px 0 20px;
+  }
+  .standart_form > p {
+    margin: 0 auto 10px;
+  }
+  .flaqs_wrapper .previous_flag_btn,
+  .flaqs_wrapper .next_flag_btn {
+    display: none !important;
+  }
+  .previous_flag_btn,
+  .next_flag_btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #544e9e;
+    position: relative;
+    cursor: pointer;
+  }
+  .previous_flag_btn svg,
+  .next_flag_btn svg {
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffffff;
+    pointer-events: none;
+  }
+  .flaqs_wrapper .previous_flag_btn,
+  .flaqs_wrapper .next_flag_btn {
+    display: none !important;
+  }
+  .flags_country {
+    width: 100%;
+    margin: 30px auto 20px;
+  }
+  .flag_item {
+    padding: 25px;
+    border-radius: 50%;
+    background-color: #f7f7f7;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+  }
+  .flag_item img {
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+  .flaqs_768 {
+    margin-bottom: 20px;
+  }
+}

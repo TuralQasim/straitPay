@@ -305,3 +305,299 @@
 .rotate {
   transform: rotate(180deg) !important;
 }
+
+@media screen and (max-width: 1024px) {
+  .career_hero {
+    margin: 40px 0;
+    gap: 15px;
+  }
+  .career_hero h2 {
+    font-size: 40px;
+    line-height: 50px;
+    max-width: 700px;
+  }
+  .career_hero p {
+    font-size: 20px;
+    line-height: 24px;
+    max-width: 500px;
+  }
+  .who_text {
+    gap: 10px;
+  }
+  .who_text h2 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .who_text p {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .who_text h4 {
+    font-size: 20px;
+    line-height: 22px;
+  }
+  .perk_items {
+    padding: 0 40px;
+  }
+  .perk_items h4:nth-of-type(1),
+  .perk_items h4:nth-of-type(2) {
+    width: 40%;
+    margin-bottom: 20px;
+  }
+  .perk_items h4:nth-of-type(3),
+  .perk_items h4:nth-of-type(4) {
+    width: 40% !important;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  .perk_items h4:nth-of-type(4) {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .career_hero {
+    margin: 30px 0;
+    gap: 10px;
+  }
+  .career_hero h2 {
+    font-size: 32px;
+    line-height: 40px;
+    max-width: 500px;
+  }
+  .career_hero p {
+    font-size: 16px;
+    line-height: 22px;
+    max-width: 400px;
+  }
+  .who {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0px;
+  }
+  .who_text {
+    gap: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0 0;
+  }
+  .who_img {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    aspect-ratio: 1/0.5;
+    margin-bottom: 50px;
+  }
+  .who_img img {
+    transform: translateY(50px);
+    width: 90%;
+    aspect-ratio: 1/0.6;
+  }
+  .who_text h2 {
+    font-size: 48px;
+    line-height: 60px;
+    text-align: center;
+  }
+  .who_text p {
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+  }
+  .who_text h4 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .life {
+    margin: 30px auto;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .life h2 {
+    font-size: 36px;
+    line-height: 80px;
+    margin-bottom: 10px;
+  }
+  .life p {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+  }
+  .perk_items {
+    padding: 0 20px;
+  }
+  .perk_items h4 {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .perk_items h4:nth-of-type(1),
+  .perk_items h4:nth-of-type(3) {
+    width: 40%;
+    margin-bottom: 20px;
+  }
+  .perk_items h4:nth-of-type(2),
+  .perk_items h4:nth-of-type(4) {
+    width: 50% !important;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  .perk_items h4:nth-of-type(4) {
+    width: 100%;
+  }
+  .roles_selects {
+    margin: 70px 0 30px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .career_hero {
+    margin: 25px 0;
+  }
+  .career_hero h2 {
+    font-size: 28px;
+    line-height: 32px;
+    max-width: 100%;
+  }
+  .career_hero p {
+    font-size: 16px;
+    line-height: 20px;
+    max-width: 350px;
+  }
+  .career_hero button {
+    padding: 12px 20px;
+  }
+  .who_img {
+    aspect-ratio: 1/0.4;
+    margin-bottom: 20px;
+  }
+  .who_img img {
+    transform: translateY(30px);
+    width: 100%;
+    aspect-ratio: 1/0.6;
+  }
+  .who_text h2 {
+    font-size: 36px;
+    line-height: 40px;
+    text-align: center;
+  }
+  .who_text p {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+  }
+  .who_text h4 {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+  }
+  .life {
+    margin: 30px auto 20px;
+    gap: 15px;
+  }
+  .life h2 {
+    font-size: 32px;
+    line-height: 50px;
+    margin-bottom: 20px;
+  }
+  .life p {
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+  }
+  .perk_items {
+    padding: 0 0 0 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .perk_items h4 {
+    font-size: 18px;
+    line-height: 20px;
+    width: 100% !important;
+  }
+  .perk_items h4:nth-last-of-type(1),
+  .perk_items h4:nth-last-of-type(2),
+  .perk_items h4:nth-last-of-type(3),
+  .perk_items h4:nth-last-of-type(4),
+  .perk_items h4:nth-last-of-type(5) {
+    width: 100% !important;
+  }
+  .roles_category {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .roles_job {
+    width: 100%;
+  }
+  .roles_selects label {
+    padding: 15px 10px;
+  }
+  .roles_selects label p {
+    font-size: 14px;
+  }
+  .roles_selects label svg {
+    right: 15px;
+    top: 20px;
+  }
+  .roles_category_dropdown li,
+  .roles_job_dropdown li {
+    padding: 5px 8px;
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .roles_items h2 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .career_hero h2 {
+    font-size: 24px;
+    line-height: 28px;
+    max-width: 100%;
+  }
+  .career_hero p {
+    font-size: 14px;
+    line-height: 16px;
+    max-width: 350px;
+  }
+  .who_text h2 {
+    font-size: 28px;
+    line-height: 30px;
+  }
+  .who_text p {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .who_text h4 {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .life p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .perk_items {
+    padding: 0 0 0 20px;
+  }
+  .perk h2 {
+    font-size: 28px;
+    line-height: 30px;
+  }
+}

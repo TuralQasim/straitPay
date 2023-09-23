@@ -1,4 +1,3 @@
-import "../../responsive.css";
 import "../blogModal/blogModal.css";
 import { AnimatePresence, motion } from "framer-motion";
 import React from "react";

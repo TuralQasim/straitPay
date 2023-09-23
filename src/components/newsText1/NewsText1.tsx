@@ -1,4 +1,3 @@
-import "../../responsive.css";
 import "../newsText1/newsText1.css";
 import { Link } from "react-router-dom";
 

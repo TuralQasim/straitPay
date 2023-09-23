@@ -1,4 +1,3 @@
-import "../../responsive.css";
 import "../blogText1/blogText.css";
 
 

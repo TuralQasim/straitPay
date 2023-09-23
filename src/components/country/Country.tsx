@@ -1,4 +1,3 @@
-import "../../responsive.css";
 import "../country/country.css";
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useState, useRef } from "react";

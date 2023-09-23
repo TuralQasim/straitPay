@@ -278,3 +278,366 @@
 .download_links a:hover {
   color: #d60c94;
 }
+
+@media screen and (max-width: 1024px) {
+  .wallets {
+    margin-bottom: 40px;
+    gap: 5px !important;
+    height: 114px;
+  }
+  .wallet_item {
+    width: calc((100% - 60px) / 4);
+    height: 100%;
+    padding: 0 15px;
+    border-radius: 24px;
+  }
+  .wallet_text h3 {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .wallet_text {
+    gap: 10px;
+  }
+  .wallet_item .standart_link {
+    font-size: 14px !important;
+  }
+  .complete {
+    width: 45%;
+  }
+  .recent {
+    width: 55%;
+  }
+  .wallet_text h2 {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .recent_true .activites {
+    width: 55%;
+  }
+  .recent_true .download {
+    width: 45%;
+  }
+  .recent_true .download .download_links a {
+    display: inline-block;
+    padding: 12px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3px !important;
+    font-size: 14px;
+  }
+  .for_compelete_activities {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    width: 85%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .wallets {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+    height: max-content;
+    padding: 0 30px;
+  }
+  .wallet_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc((100% - 20px) / 2);
+    height: 144px;
+    padding: 0 20px;
+    border-radius: 24px;
+    margin-bottom: 20px;
+  }
+  .wallet_text h3 {
+    font-family: "Neurial Grotesk";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    color: #0e0f0c;
+  }
+  .wallet_item .standart_link {
+    font-size: 16px !important;
+  }
+  .account_title {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .complete a {
+    font-size: 16px;
+    line-height: 20px;
+    padding-left: 25px;
+  }
+  .complete a::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    border: 1px solid #d60c94;
+    width: 15px;
+    height: 15px;
+  }
+  .download {
+    gap: 10px;
+  }
+  .download_links {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .activites p {
+    font-size: 16px;
+    line-height: 20px;
+    max-width: 304px;
+  }
+  .complete {
+    width: 55%;
+  }
+  .recent {
+    width: 45%;
+  }
+  .recent_true .activites {
+    width: 61%;
+  }
+  .recent_true .download {
+    width: 39%;
+  }
+  .for_compelete_activities {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 5px;
+    width: 90%;
+  }
+  .for_complite_item {
+    gap: 5px;
+    width: 100%;
+  }
+  .for_complite_item h2 {
+    margin-left: 0px;
+    font-size: 20px;
+  }
+  .for_complite_img {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #e8faf2;
+    padding: 20px;
+  }
+  .for_complete_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0px;
+  }
+  .download_links {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .download {
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .hey p {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .wallets {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+    height: max-content;
+    padding: 0 30px;
+  }
+  .wallet_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 144px;
+    padding: 0 25px;
+    border-radius: 24px;
+    margin-bottom: 20px;
+  }
+  .wallet_text h3 {
+    font-family: "Neurial Grotesk";
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    color: #0e0f0c;
+  }
+  .wallet_item .standart_link {
+    font-size: 18px !important;
+  }
+  .hey p {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .account_title {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .complete a {
+    font-size: 18px;
+    line-height: 24px;
+    padding-left: 30px;
+  }
+  .complete a::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    border: 1px solid #d60c94;
+    width: 20px;
+    height: 20px;
+  }
+  .download {
+    gap: 10px;
+  }
+  .download_links {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .activites p {
+    font-size: 18px;
+    line-height: 20px;
+    max-width: 304px;
+  }
+  .complete {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0 auto;
+  }
+  .complete .account_title {
+    margin: 0 auto;
+  }
+  .recent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .activites {
+    width: 100%;
+  }
+  .activites p {
+    max-width: 100%;
+    text-align: center;
+    width: 100%;
+  }
+  .recent .account_title {
+    margin: 0 auto;
+  }
+  .download {
+    width: 100%;
+  }
+  .download .account_title {
+    margin: 0 auto 20px;
+  }
+  .download .download_links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 7px;
+    align-items: center;
+    width: 100%;
+  }
+  .download .download_links a {
+    display: inline-block;
+    padding: 12px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3px !important;
+    font-size: 14px;
+  }
+  .account_foot {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+    align-items: flex-start;
+    margin-bottom: 50px;
+  }
+  .recent_true {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .recent_true .activites {
+    width: 100% !important;
+    margin-bottom: 20px;
+  }
+  .recent_true .activites .for_compelete_activities {
+    width: 100%;
+    gap: 10px;
+  }
+  .recent_true .activites .account_title {
+    margin: 0 auto 15px;
+  }
+  .for_complite_item {
+    gap: 15px;
+  }
+  .for_complite_item h2 {
+    margin-left: 25px;
+  }
+  .recent_true .download {
+    width: 100%;
+  }
+  .recent_true .download .account_title {
+    margin: 0 auto 15px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .wallets {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+    height: max-content;
+    padding: 0;
+  }
+}

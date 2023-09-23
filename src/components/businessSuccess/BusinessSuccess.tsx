@@ -1,4 +1,3 @@
-import "../../responsive.css";
 import "../businessSuccess/businessSuccess.css";
 import { Link } from "react-router-dom";
 

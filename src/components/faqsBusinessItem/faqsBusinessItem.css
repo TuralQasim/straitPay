@@ -54,3 +54,28 @@
   color: #575757;
   margin-top: 20px;
 }
+
+@media screen and (max-width: 1024px) {
+  .faqs_business_item p {
+    font-size: 20px;
+    line-height: 24px;
+    width: 85%;
+  }
+  .faqs_business_item svg {
+    width: 15%;
+  }
+  .faqs_business_item_text {
+    padding: 0 50px 0 20px;
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .faqs_business_item_text {
+    padding: 0 50px 0 20px;
+    font-size: 18px;
+    line-height: 22px;
+    margin-top: 20px;
+  }
+}

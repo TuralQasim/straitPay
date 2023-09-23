@@ -238,3 +238,53 @@
 .standart_close:hover {
   color: #d60c94;
 }
+
+@media screen and (max-width: 768px) {
+  .standart_title {
+    gap: 10px;
+  }
+  .standart_title h2 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .standart_title p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .standart_form {
+    max-width: 80%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .standart_title {
+    gap: 10px;
+  }
+  .standart_title h2 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+  .standart_title p {
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+  }
+  .standart_form {
+    max-width: 95%;
+  }
+  .standart_form label {
+    gap: 5px;
+    margin-bottom: 15px;
+  }
+  .standart_form button {
+    margin: 10px 0 20px;
+  }
+  .standart_form > p {
+    margin: 0 auto 10px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .login {
+    margin-top: 20px;
+    padding-top: 30px;
+  }
+}

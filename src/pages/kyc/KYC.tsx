@@ -1,4 +1,3 @@
-import "../../responsive.css";
 import "../kyc/kyc.css";
 import { AnimatePresence, motion } from "framer-motion";
 import React, {

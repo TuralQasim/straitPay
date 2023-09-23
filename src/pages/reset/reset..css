@@ -42,3 +42,10 @@
 .standart_close:hover {
   color: #d60c94;
 }
+
+@media screen and (max-width: 320px) {
+  .login {
+    margin-top: 20px;
+    padding-top: 30px;
+  }
+}

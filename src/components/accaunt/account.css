@@ -159,3 +159,23 @@
   font-size: 22px;
   transition: 0.4s;
 }
+@media screen and (max-width: 768px) {
+  .standart_form {
+    max-width: 80%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .standart_form {
+    max-width: 95%;
+  }
+  .standart_form label {
+    gap: 5px;
+    margin-bottom: 15px;
+  }
+  .standart_form button {
+    margin: 10px 0 20px;
+  }
+  .standart_form > p {
+    margin: 0 auto 10px;
+  }
+}

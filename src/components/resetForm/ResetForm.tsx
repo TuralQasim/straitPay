@@ -1,5 +1,4 @@
 import "../resetForm/resetForm.css";
-import "../../responsive.css";
 import React from "react";
 
 const ResetForm: React.FC = () => {

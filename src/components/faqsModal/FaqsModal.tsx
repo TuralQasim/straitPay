@@ -1,4 +1,3 @@
-import "../../responsive.css";
 import "../faqsModal/faqsModal.css";
 import React from "react";
 import { HiXMark } from "react-icons/hi2";

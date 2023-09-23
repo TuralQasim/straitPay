@@ -1,4 +1,3 @@
-import "../../responsive.css";
 import "../business/business.css";
 import React, { useContext, useState } from "react";
 import ExpectItem from "../../components/expectItem/ExpectItem";

@@ -1,4 +1,3 @@
-import "../../responsive.css";
 import "../userAccount/userAccount.css";
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";

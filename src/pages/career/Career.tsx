@@ -1,4 +1,3 @@
-import "../../responsive.css";
 import "../career/career.css";
 import React, { useState, useRef } from "react";
 import { FaArrowDown } from "react-icons/fa";

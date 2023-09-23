@@ -1,4 +1,3 @@
-import "../../responsive.css";
 import "../accaunt/account.css";
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useState, useRef } from "react";

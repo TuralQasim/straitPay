@@ -1,4 +1,3 @@
-import "../../responsive.css";
 import "../login/login.css";
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";

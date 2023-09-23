@@ -1,4 +1,3 @@
-import "../../responsive.css";
 import "../businessDocs/businessDocs.css";
 import React, { useState } from "react";
 

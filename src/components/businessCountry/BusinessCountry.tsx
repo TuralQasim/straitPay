@@ -1,4 +1,3 @@
-import "../../responsive.css";
 import "../businessCountry/businessCountry.css";
 import React from "react";
 import { useState } from "react";

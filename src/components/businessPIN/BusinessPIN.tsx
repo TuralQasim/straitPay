@@ -1,4 +1,3 @@
-import "../../responsive.css";
 import React, { useState, useRef } from "react";
 import "../businessPIN/businessPIN.css";
 

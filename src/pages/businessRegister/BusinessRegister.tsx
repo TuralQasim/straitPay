@@ -1,4 +1,3 @@
-import "../../responsive.css";
 import "../businessRegister/businessRegister.css";
 import React from "react";
 import { Dispatch } from "react";

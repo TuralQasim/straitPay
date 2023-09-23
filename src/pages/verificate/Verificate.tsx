@@ -1,4 +1,3 @@
-import "../../responsive.css";
 import "../verificate/verificate.css";
 import React, { useState, useRef, useContext } from "react";
 import { FaXmark } from "react-icons/fa6";

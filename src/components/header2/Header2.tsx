@@ -1,4 +1,3 @@
-import "../../responsive.css";
 import "../header2/header2.css";
 import React, { useContext, useState } from "react";
 import { NavLink, Link } from "react-router-dom";

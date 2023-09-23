@@ -1,9 +1,4 @@
 import "./container.css";
-// import "./responsive/responsive1024.css";
-// import "./responsive/responsive768.css";
-// import "./responsive/responsive480.css";
-// import "./responsive/responsive320.css";
-import "./responsive.css";
 import { lazy, Suspense} from "react";
 import Header from "./components/header/Header";
 import Header2 from "./components/header2/Header2";
